@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 
-export function BlogPosts() {
+export function BlogPosts({ showSummary = false }: { showSummary?: boolean }) {
   let allBlogs = getBlogPosts()
 
   return (
@@ -24,7 +24,11 @@ export function BlogPosts() {
             <h2 className="text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
               {post.metadata.title}
             </h2>
-            <p className="text-neutral-600 text-sm">{post.metadata.summary}</p>
+            {showSummary ? (
+              <p className="text-neutral-600 text-sm">
+                {post.metadata.summary}
+              </p>
+            ) : null}
             <p className="font-light text-sm text-neutral-400 dark:text-neutral-400 w-[100px] tabular-nums">
               {formatDate(post.metadata.publishedAt, false)}
             </p>
