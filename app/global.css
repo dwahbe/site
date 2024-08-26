@@ -148,3 +148,7 @@ table {
 .title {
   text-wrap: balance;
 }
+
+h1 {
+  font-family: var(--font-instrument-serif);
+}

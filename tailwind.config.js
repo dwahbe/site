@@ -2,8 +2,12 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-instrument-sans)'],
+        serif: ['var(--font-instrument-serif)'],
+      },
+    },
   },
   plugins: [],
 }
-
