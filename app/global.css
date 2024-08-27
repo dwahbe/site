@@ -48,12 +48,13 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all underline-offset-3 decoration-[0.1em];
+  color: var(--accent-color, inherit);
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
   content: '#';
+  color: var(--accent-color, inherit);
 }
 
 .prose *:hover > .anchor {
@@ -88,11 +89,14 @@ html {
 }
 
 .prose h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-4xl md:text-5xl font-medium tracking-tight mt-6 mb-2;
 }
 
 .prose h2 {
   @apply text-xl font-medium tracking-tight mt-6 mb-2;
+}
+.prose h2[id] {
+  scroll-margin-top: 2rem;
 }
 
 .prose h3 {
@@ -151,4 +155,8 @@ table {
 
 h1 {
   font-family: var(--font-instrument-serif);
+}
+
+h2 {
+  @apply text-2xl font-medium tracking-tight mt-6 mb-2;
 }

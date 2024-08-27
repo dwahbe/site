@@ -11,28 +11,28 @@ export function PortfolioPosts({
   return (
     <div>
       {allPosts
-        // .sort((a, b) => {
-        //   if (
-        //     new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-        //   ) {
-        //     return -1
-        //   }
-        //   return 1
-        // })
+        .sort((a, b) => {
+          if (a.metadata.order < b.metadata.order) {
+            return -1
+          }
+          return 1
+        })
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex flex-col space-y-1 mb-6"
+            className="flex flex-col gap-1 mb-6 bg-neutral-100 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
+            style={{
+              // @ts-expect-error custom properties
+              '--accent-color': post.metadata.color,
+            }}
             href={`/portfolio/${post.slug}`}
           >
-            <h2 className="text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
+            <h3 className="text-balance text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
               {post.metadata.title}
-            </h2>
-            {showSummary ? (
-              <p className="text-neutral-600 text-sm dark:text-neutral-400">
-                {post.metadata.summary}
-              </p>
-            ) : null}
+            </h3>
+            <p className="text-neutral-600 text-sm dark:text-neutral-400">
+              {post.metadata.summary}
+            </p>
           </Link>
         ))}
     </div>

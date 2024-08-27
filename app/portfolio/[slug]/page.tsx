@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getPortfolioPosts } from 'app/portfolio/utils'
 import { baseUrl } from 'app/sitemap'
+import ArrowIcon from 'app/components/arrow'
 
 export async function generateStaticParams() {
   let posts = getPortfolioPosts()
@@ -59,8 +60,25 @@ export default function Blog({ params }) {
   }
 
   return (
-    <section>
-      <h1 className="title text-4xl">{post.metadata.title}</h1>
+    <section
+      style={{
+        // @ts-expect-error custom properties
+        '--accent-color': post.metadata.color,
+      }}
+    >
+      <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
+        <h1 className="title text-4xl md:text-5xl mr-auto">
+          {post.metadata.title}
+        </h1>
+        {post.metadata.link ? (
+          <a
+            className="flex gap-2 items-center px-4 py-2 rounded-full bg-[var(--accent-color)] text-white transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]"
+            href={post.metadata.link}
+          >
+            View site <ArrowIcon />
+          </a>
+        ) : null}
+      </div>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm"></div>
       <article className="prose">
         <CustomMDX source={post.content} />
