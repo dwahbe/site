@@ -21,8 +21,8 @@ function parseFrontmatter(fileContent: string) {
   frontMatterLines.forEach((line) => {
     let [key, ...valueArr] = line.split(': ')
     let value = valueArr.join(': ').trim()
-    value = value.replace(/^['"](.*)['"]$/, '$1') // Remove quotes
-    metadata[key.trim() as keyof Metadata] = value
+    value = value.replace(/^['"]?(.*)['"]$/, '$1') // Remove quotes
+    metadata[key.trim()] = value
   })
 
   return { metadata: metadata as Metadata, content }
