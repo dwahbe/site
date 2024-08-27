@@ -12,12 +12,12 @@ export default function Page() {
         <div className="md:col-span-3">
           <h1 className="mb-8 text-4xl md:text-5xl">Hi, I’m Dylan Wahbe</h1>
           <p className="">
-            Dylan Wahbe is a recent graduate of New York University, where he
-            helped start and lead Sunrise Movement NYU, which successfully
-            pushed NYU to divest their 5+ billion dollar endowment from the
-            fossil fuel industry. In December of 2023, he joined Hack Club as
-            their Climate Partnerships Advisor, connecting climate justice
-            organizations with HCB, Hack Club’s fiscal sponsorship program.
+            I graduated from NYU in 2023 with a B.S in Media, Culture, and
+            Communications. While at NYU, I helped start and lead Sunrise
+            Movement NYU, which successfully pushed NYU to divest their 5+
+            billion dollar endowment from the fossil fuel industry. In December
+            of 2023, I joined Hack Club’s fiscal sponsorship team, working with
+            climate and social justice nonprofits around the world.
           </p>
         </div>
         <Image
