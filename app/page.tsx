@@ -1,6 +1,9 @@
 import { PortfolioPosts } from 'app/components/posts'
 import Image from 'next/image'
 import Portrait from './profilephoto.jpg'
+import ItsAllPlay from './itsallplay.png'
+import Coffee from './coffee.jpeg'
+import ArrowIcon from './components/arrow'
 
 export default function Page() {
   return (
@@ -24,10 +27,33 @@ export default function Page() {
           placeholder="blur"
         />
       </header>
-      <h2 className="mb-1"> Selected Work</h2>
-      <div className="my-8">
+      <h2 className="mb-6"> Selected work</h2>
+      <div className="mb-8">
         <PortfolioPosts />
       </div>
+      <h2 className="mb-6"> Some other things</h2>
+      <section className="grid gap-6 md:grid-cols-2 md:items-center">
+        <a
+          className="flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl"
+          href="https://vimeo.com/909792421"
+        >
+          <Image src={ItsAllPlay} alt="Its All Play Still" />
+          <div className="p-4 flex items-center gap-2 justify-between ">
+            <p className="font-bold">I scored a film</p>
+            <ArrowIcon />
+          </div>
+        </a>
+        <a className="flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl">
+          <Image
+            className="object-contain max-h-40"
+            src={Coffee}
+            alt="Dylan as a barista"
+          />
+          <div className="p-4 flex items-center gap-2 justify-between ">
+            <p className="font-bold">I was a barista!</p>
+          </div>
+        </a>
+      </section>
     </section>
   )
 }
