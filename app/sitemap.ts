@@ -1,14 +1,14 @@
-import { getBlogPosts } from 'app/blog/utils'
+import { getPortfolioPosts } from 'app/portfolio/utils'
 
 export const baseUrl = 'https://dylanwahbe.vercel.app'
 
 export default async function sitemap() {
-  let blogs = getBlogPosts().map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
+  let blogs = getPortfolioPosts().map((post) => ({
+    url: `${baseUrl}/portfolio/${post.slug}`,
+    lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  let routes = ['', '/blog'].map((route) => ({
+  let routes = ['', '/portfolio'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
