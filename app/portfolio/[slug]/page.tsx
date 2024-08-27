@@ -13,9 +13,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export const ImageComponent = (props) => {
-  return <Image {...props} />
-}
+// export const ImageComponent = (props) => {
+//   return <Image {...props} />
+// }
 
 export function generateMetadata({ params }) {
   let post = getPortfolioPosts().find((post) => post.slug === params.slug)
