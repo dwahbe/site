@@ -72,7 +72,11 @@ export default function Blog({ params }) {
         </h1>
         {post.metadata.link ? (
           <a
-            className="flex gap-2 items-center px-4 py-2 rounded-full bg-[var(--accent-color)] text-white transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]"
+            className={`flex gap-2 items-center px-4 py-2 rounded-full bg-[var(--accent-color)] ${
+              post.slug === 'sunrise-movement'
+                ? 'text-neutral-900'
+                : 'text-white'
+            } transition-shadow hover:shadow-[0_0_0_1px_white,0_0_0_3px_var(--accent-color)] dark:hover:shadow-[0_0_0_1px_black,0_0_0_3px_var(--accent-color)]`}
             href={post.metadata.link}
           >
             View site <ArrowIcon />
