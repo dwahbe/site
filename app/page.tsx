@@ -24,7 +24,7 @@ export default function Page() {
           placeholder="blur"
         />
       </header>
-      <h2 className="mb-1"> Some of my work </h2>
+      <h2 className="mb-1"> Selected Work</h2>
       <div className="my-8">
         <PortfolioPosts />
       </div>
