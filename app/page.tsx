@@ -32,7 +32,7 @@ export default function Page() {
         <PortfolioPosts />
       </div>
       <h2 className="mb-6"> A few other projects</h2>
-      <section className="grid gap-6 md:grid-cols-2 md:items-center">
+      <section className="hover:outline grid gap-6 md:grid-cols-2 md:items-center">
         <a
           className="flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl"
           href="https://vimeo.com/909792421"
