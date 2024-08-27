@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getPortfolioPosts } from 'app/portfolio/utils'
+import Image from 'next/image'
 
 export function PortfolioPosts({
   showSummary = false,
@@ -27,9 +28,22 @@ export function PortfolioPosts({
             }}
             href={`/portfolio/${post.slug}`}
           >
-            <h3 className="text-balance text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
-              {post.metadata.title}
-            </h3>
+            <section className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+              <h3 className="text-balance text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
+                {post.metadata.title}
+              </h3>
+              {post.metadata.previewImage ? (
+                <Image
+                  className=" max-w-10 max-h-10 md:col-span-2 object-contain"
+                  src={
+                    require(`app/portfolio/images/${post.metadata.previewImage}`)
+                      .default
+                  }
+                  alt={post.metadata.title}
+                />
+              ) : null}
+            </section>
+
             <p className="text-neutral-600 text-sm dark:text-neutral-400">
               {post.metadata.summary}
             </p>

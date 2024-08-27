@@ -3,11 +3,12 @@ import path from 'path'
 
 type Metadata = {
   title: string
+  order: number
   summary: string
   image?: string
   color?: string
   link?: string
-  order: number
+  previewImage?: string
 }
 
 function parseFrontmatter(fileContent: string) {

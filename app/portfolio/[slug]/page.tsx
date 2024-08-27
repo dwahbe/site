@@ -91,7 +91,7 @@ export default function Blog({ params }) {
       {post.metadata.image ? (
         <Image
           className="mt-20 max-w-64 md:col-span-2"
-          src={require(`./${post.metadata.image}`).default}
+          src={require(`app/portfolio/images/${post.metadata.image}`).default}
           alt={post.metadata.title}
         />
       ) : null}
