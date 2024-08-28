@@ -21,7 +21,7 @@ export default function Page() {
           </p>
         </div>
         <Image
-          className="rounded-2xl max-w-64 md:col-span-2"
+          className="max-w-64 rounded-2xl md:col-span-2"
           src={Portrait}
           alt="Portrait of Dylan Wahbe"
           placeholder="blur"
@@ -34,29 +34,29 @@ export default function Page() {
       <h2 className="mb-6"> A few other projects</h2>
       <section className="grid gap-6 md:grid-cols-2 md:items-center">
         <a
-          className="hover:outline flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl"
+          className="flex flex-col overflow-hidden rounded-xl bg-neutral-100 transition-shadow hover:outline dark:bg-neutral-800"
           href="https://vimeo.com/909792421"
         >
           <Image
-            className="object-contain max-h-40"
+            className="max-h-40 object-cover"
             src={ItsAllPlay}
             alt="Its All Play Still"
           />
-          <div className="p-4 flex items-center gap-2 justify-between ">
+          <div className="flex items-center justify-between gap-2 p-4">
             <p className="font-bold">I scored a film</p>
             <ArrowIcon />
           </div>
         </a>
         <a
-          className="hover:outline flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl"
+          className="flex flex-col overflow-hidden rounded-xl bg-neutral-100 transition-shadow hover:outline dark:bg-neutral-800"
           href="https://www.google.com/maps/dir//170E+E+2nd+St,+New+York,+NY+10009/@40.7227048,-74.0670797,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c25912f1ae086b:0xd5af6ef1a49cb484!2m2!1d-73.9846921!2d40.7227162?entry=ttu&g_ep=EgoyMDI0MDgyMy4wIKXMDSoASAFQAw%3D%3D"
         >
           <Image
-            className="object-contain max-h-40"
+            className="max-h-40 object-contain"
             src={Coffee}
             alt="Dylan as a barista"
           />
-          <div className="p-4 flex items-center gap-2 justify-between ">
+          <div className="flex items-center justify-between gap-2 p-4">
             <p className="font-bold">I was a barista!</p>
             <ArrowIcon />
           </div>
