@@ -37,13 +37,20 @@ export default function Page() {
           className="hover:outline flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl"
           href="https://vimeo.com/909792421"
         >
-          <Image src={ItsAllPlay} alt="Its All Play Still" />
+          <Image
+            className="object-contain max-h-40"
+            src={ItsAllPlay}
+            alt="Its All Play Still"
+          />
           <div className="p-4 flex items-center gap-2 justify-between ">
             <p className="font-bold">I scored a film</p>
             <ArrowIcon />
           </div>
         </a>
-        <a className="hover:outline flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl">
+        <a
+          className="hover:outline flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl"
+          href="https://www.google.com/maps/dir//170E+E+2nd+St,+New+York,+NY+10009/@40.7227048,-74.0670797,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c25912f1ae086b:0xd5af6ef1a49cb484!2m2!1d-73.9846921!2d40.7227162?entry=ttu&g_ep=EgoyMDI0MDgyMy4wIKXMDSoASAFQAw%3D%3D"
+        >
           <Image
             className="object-contain max-h-40"
             src={Coffee}
@@ -51,6 +58,7 @@ export default function Page() {
           />
           <div className="p-4 flex items-center gap-2 justify-between ">
             <p className="font-bold">I was a barista!</p>
+            <ArrowIcon />
           </div>
         </a>
       </section>
