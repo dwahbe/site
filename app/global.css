@@ -1,4 +1,6 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 ::selection {
   background-color: #47a3f3;
@@ -48,7 +50,9 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all underline-offset-3 decoration-[0.1em];
+  @apply underline transition-all decoration-[0.1em];
+  /* underline-offset-3 */
+  text-underline-offset: 3px;
   color: var(--accent-color, inherit);
 }
 
