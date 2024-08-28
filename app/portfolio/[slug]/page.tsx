@@ -71,13 +71,13 @@ export default function Blog({ params }) {
         '--accent-color': post.metadata.color,
       }}
     >
-      <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
-        <h1 className="title text-4xl md:text-5xl mr-auto">
+      <div className="flex flex-col items-start gap-6 md:flex-row md:items-center">
+        <h1 className="title mr-auto text-4xl md:text-5xl">
           {post.metadata.title}
         </h1>
         {post.metadata.link ? (
           <a
-            className={`flex gap-2 items-center px-4 py-2 rounded-full bg-[var(--accent-color)] ${
+            className={`flex items-center gap-2 rounded-full bg-[var(--accent-color)] px-4 py-2 ${
               post.slug === 'sunrise-movement'
                 ? 'text-neutral-900'
                 : 'text-white'
@@ -95,7 +95,7 @@ export default function Blog({ params }) {
           alt={post.metadata.title}
         />
       ) : null}
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm"></div>
+      <div className="mb-8 mt-2 flex items-center justify-between text-sm"></div>
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
