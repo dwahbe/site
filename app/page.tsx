@@ -32,9 +32,9 @@ export default function Page() {
         <PortfolioPosts />
       </div>
       <h2 className="mb-6"> A few other projects</h2>
-      <section className="hover:outline grid gap-6 md:grid-cols-2 md:items-center">
+      <section className="grid gap-6 md:grid-cols-2 md:items-center">
         <a
-          className="flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl"
+          className="hover:outline flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl"
           href="https://vimeo.com/909792421"
         >
           <Image src={ItsAllPlay} alt="Its All Play Still" />
@@ -43,7 +43,7 @@ export default function Page() {
             <ArrowIcon />
           </div>
         </a>
-        <a className="flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl">
+        <a className="hover:outline flex flex-col bg-neutral-100 dark:bg-neutral-800 transition-shadow overflow-hidden rounded-xl">
           <Image
             className="object-contain max-h-40"
             src={Coffee}
