@@ -1,11 +1,12 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { Navbar } from './components/nav'
+// import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 import { Instrument_Sans, Instrument_Serif } from 'next/font/google'
+import Providers from './providers'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -64,15 +65,18 @@ export default function RootLayout({
         sans.className,
         serif.variable
       )}
+      suppressHydrationWarning
     >
       <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-1 mt-6 md:mt-12 flex flex-col px-2 md:px-0">
-          {/* <Navbar /> */}
-          {children}
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
-        </main>
+        <Providers>
+          <main className="flex-auto min-w-1 mt-6 md:mt-12 flex flex-col px-2 md:px-0">
+            {/* <Navbar /> */}
+            {children}
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </main>
+        </Providers>
       </body>
     </html>
   )
