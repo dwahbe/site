@@ -1,6 +1,6 @@
 import { getPortfolioPosts } from 'app/portfolio/utils'
 
-export const baseUrl = 'https://dylanwahbe.vercel.app'
+export const baseUrl = 'https://dwahbe.com'
 
 export default async function sitemap() {
   let blogs = getPortfolioPosts().map((post) => ({
