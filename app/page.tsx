@@ -11,7 +11,7 @@ export default function Page() {
       <header className="grid gap-6 md:grid-cols-5 md:items-center">
         <div className="md:col-span-3">
           <h1 className="mb-2 text-4xl md:text-5xl">Hi, I’m Dylan Wahbe</h1>
-          <p className="mb-6 max-w-min rounded-full border p-1 text-neutral-200">
+          <p className="mb-6 max-w-min rounded-full bg-[#ff4921]/20 px-2 py-1 text-xs text-[#ff4921]">
             he/him
           </p>
           <p className="">
