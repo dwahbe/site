@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: 'Dylan Wahbe',
-    template: '%s | Dylan Wahbe',
+    template: '%s – Dylan Wahbe',
   },
   description: 'This is my portfolio.',
   openGraph: {
-    title: 'My Portfolio',
+    title: 'Dylan Wahbe',
     description: 'This is my portfolio.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Dylan Wahbe',
     locale: 'en_US',
     type: 'website',
   },
@@ -67,7 +67,7 @@ export default function RootLayout({
       )}
       suppressHydrationWarning
     >
-      <body className="mx-4 mt-8 max-w-2xl antialiased lg:mx-auto">
+      <body className="mx-4 mt-8 max-w-2xl antialiased md:mx-auto">
         <Providers>
           <main className="mt-6 flex min-w-1 flex-auto flex-col px-2 md:mt-12 md:px-0">
             {/* <Navbar /> */}
