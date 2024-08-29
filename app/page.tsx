@@ -46,7 +46,7 @@ export default function Page() {
             alt="Its All Play Still"
           />
           <div className="flex items-center justify-between gap-2 p-4">
-            <p className="font-bold">I scored a film</p>
+            <p className="font-medium tracking-tight">I scored a film</p>
             <ArrowIcon />
           </div>
         </a>
@@ -60,7 +60,7 @@ export default function Page() {
             alt="Dylan as a barista"
           />
           <div className="flex items-center justify-between gap-2 p-4">
-            <p className="font-bold">I was a barista!</p>
+            <p className="font-medium tracking-tight">I was a barista!</p>
             <ArrowIcon />
           </div>
         </a>
