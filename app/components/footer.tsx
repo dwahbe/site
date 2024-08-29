@@ -42,9 +42,9 @@ export default function Footer() {
         </ul>
         <ThemeSwitcher />
       </section>
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
+      {/* <p className="mt-8 text-neutral-600 dark:text-neutral-300">
         © {new Date().getFullYear()} MIT Licensed
-      </p>
+      </p> */}
     </footer>
   )
 }
