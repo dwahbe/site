@@ -10,7 +10,10 @@ export default function Page() {
     <section>
       <header className="grid gap-6 md:grid-cols-5 md:items-center">
         <div className="md:col-span-3">
-          <h1 className="mb-8 text-4xl md:text-5xl">Hi, I’m Dylan Wahbe</h1>
+          <h1 className="mb-2 text-4xl md:text-5xl">Hi, I’m Dylan Wahbe</h1>
+          <p className="mb-6 max-w-min rounded-full border p-1 text-neutral-200">
+            he/him
+          </p>
           <p className="">
             I graduated from NYU in 2023 with a degree in Media, Culture, and
             Communications. While at NYU, I helped start and lead Sunrise
