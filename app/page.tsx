@@ -18,7 +18,7 @@ export default function Page() {
             I graduated from NYU in 2023 with a degree in Media, Culture, and
             Communications. While at NYU, I helped start and lead Sunrise
             Movement NYU, which successfully pushed NYU to divest their 5+
-            billion dollar endowment from the fossil fuel industry. In December
+            billion dollar endowment from the fossil fuel industry. In September
             of 2023, I joined Hack Club’s fiscal sponsorship team, working with
             climate and social justice nonprofits around the world.
           </p>

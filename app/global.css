@@ -36,7 +36,7 @@ html {
 }
 
 .prose .anchor {
-  @apply absolute invisible no-underline;
+  @apply invisible absolute no-underline;
 
   margin-left: -1em;
   padding-right: 0.5em;
@@ -50,7 +50,7 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-[0.1em];
+  @apply underline decoration-[0.1em] transition-all;
   /* underline-offset-3 */
   text-underline-offset: 3px;
   color: var(--accent-color, inherit);
@@ -66,11 +66,11 @@ html {
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+  @apply overflow-x-auto rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm dark:border-neutral-900 dark:bg-neutral-900;
 }
 
 .prose code {
-  @apply px-1 py-0.5 rounded-lg;
+  @apply rounded-lg px-1 py-0.5;
 }
 
 .prose pre code {
@@ -89,26 +89,26 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-2 text-neutral-800 dark:text-neutral-200;
 }
 
 .prose h1 {
-  @apply text-4xl md:text-5xl font-medium tracking-tight mt-6 mb-2;
+  @apply mt-6 text-4xl font-medium tracking-tight md:text-5xl;
 }
 
 .prose h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply mb-1 mt-6 text-xl font-medium tracking-tight;
 }
 .prose h2[id] {
   scroll-margin-top: 2rem;
 }
 
 .prose h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply mb-2 mt-6 text-xl font-medium tracking-tight;
 }
 
 .prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+  @apply mb-2 mt-6 text-lg font-medium tracking-tight;
 }
 
 .prose strong {
@@ -162,5 +162,5 @@ h1 {
 }
 
 h2 {
-  @apply text-2xl font-medium tracking-tight mt-6 mb-2;
+  @apply mb-2 mt-6 text-2xl font-medium tracking-tight;
 }
