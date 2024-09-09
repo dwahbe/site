@@ -15,12 +15,10 @@ export default function Page() {
             he/him
           </p>
           <p className="">
-            I graduated from NYU in 2023 with a degree in Media, Culture, and
-            Communications. While at NYU, I helped start and lead Sunrise
-            Movement NYU, which successfully pushed NYU to divest their 5+
-            billion dollar endowment from the fossil fuel industry. In September
-            of 2023, I joined Hack Club’s fiscal sponsorship team, working with
-            climate and social justice nonprofits around the world.
+            Currently working at Hack Club, designing tools to help the next
+            generation of nonprofits have impact. Previously organizing with
+            Sunrise NYU, building websites, and working as a barista. Always
+            playing music and talking politics.
           </p>
         </div>
         <Image
