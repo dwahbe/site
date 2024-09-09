@@ -8,7 +8,7 @@ import ArrowIcon from './components/arrow'
 export default function Page() {
   return (
     <section>
-      <header className="grid gap-6 md:grid-cols-5 md:items-center">
+      <header className="grid gap-6 md:grid-cols-5 md:items-center xl:grid-cols-5 xl:items-center">
         <div className="md:col-span-3">
           <h1 className="mb-2 text-4xl md:text-5xl">Hi, I’m Dylan Wahbe</h1>
           <p className="mb-6 max-w-min rounded-full bg-[#ff4921]/20 px-2 py-1 text-xs text-[#ff4921]">
@@ -30,7 +30,7 @@ export default function Page() {
           placeholder="blur"
         />
       </header>
-      <h2 className="mb-6"> Selected work</h2>
+      <h2 className="mb-6"> Work I'm proud of</h2>
       <div className="mb-8">
         <PortfolioPosts />
       </div>
@@ -60,7 +60,7 @@ export default function Page() {
             alt="Dylan as a barista"
           />
           <div className="flex items-center justify-between gap-2 p-4">
-            <p className="font-medium tracking-tight">I was a barista!</p>
+            <p className="font-medium tracking-tight">I was a barista</p>
             <ArrowIcon />
           </div>
         </a>
