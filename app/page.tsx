@@ -8,17 +8,17 @@ import ArrowIcon from './components/arrow'
 export default function Page() {
   return (
     <section>
-      <header className="grid gap-6 md:grid-cols-5 md:items-center xl:grid-cols-5 xl:items-center">
+      <header className="grid gap-6 md:grid-cols-5 md:items-center xl:items-center">
         <div className="md:col-span-3">
           <h1 className="mb-2 text-4xl md:text-5xl">Hi, I’m Dylan Wahbe</h1>
           <p className="mb-6 max-w-min rounded-full bg-[#ff4921]/20 px-2 py-1 text-xs text-[#ff4921]">
             he/him
           </p>
           <p className="">
-            Currently working at Hack Club, designing tools to help the next
-            generation of nonprofits have impact. Previously organizing with
-            Sunrise NYU, building websites, and working as a barista. Always
-            playing music and talking politics.
+            I'm currently working at Hack Club, designing tools to help the next
+            generation of nonprofits have impact. Previously, I was organizing
+            with Sunrise NYU, building websites, and working as a barista.
+            Always happy to be playing music and talking politics.
           </p>
         </div>
         <Image
