@@ -1,6 +1,6 @@
 import { getPortfolioPosts } from 'app/portfolio/utils'
 
-export const baseUrl = 'https://dwahbe.com'
+export const baseUrl = 'https://dylanwahbe.com'
 
 export default async function sitemap() {
   let blogs = getPortfolioPosts().map((post) => ({
