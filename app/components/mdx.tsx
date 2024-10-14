@@ -101,7 +101,7 @@ function RichLink({
   imageAlt?: string
 }) {
   return (
-    <div className="flex flex-col gap-4 overflow-hidden rounded-xl bg-neutral-100 transition-colors hover:bg-neutral-200 md:gap-16 dark:bg-neutral-800">
+    <div className="flex flex-col gap-4 overflow-hidden rounded-xl bg-neutral-100 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700 md:gap-16 dark:bg-neutral-800">
       <a
         href={link}
         target="_blank"
