@@ -32,7 +32,7 @@ export default function Page() {
       <div className="mb-8">
         <PortfolioPosts />
       </div>
-      <h2 className="mb-6"> A few other projects</h2>
+      {/* <h2 className="mb-6"> A few other projects</h2>
       <section className="grid gap-6 md:grid-cols-2 md:items-center">
         <a
           className="flex flex-col overflow-hidden rounded-xl bg-neutral-100 transition-shadow hover:outline dark:bg-neutral-800"
@@ -62,7 +62,7 @@ export default function Page() {
             <ArrowIcon />
           </div>
         </a>
-      </section>
+      </section> */}
     </section>
   )
 }

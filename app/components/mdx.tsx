@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
+import ArrowIcon from './arrow'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -77,13 +78,62 @@ function createHeading(level) {
           className: 'anchor',
         }),
       ],
-      children
+      children,
     )
   }
 
   Heading.displayName = `Heading${level}`
 
   return Heading
+}
+
+function RichLink({
+  title,
+  subtitle,
+  link,
+  image,
+  imageAlt,
+}: {
+  title: string
+  subtitle?: string
+  link: string
+  image: string
+  imageAlt?: string
+}) {
+  return (
+    <div className="flex flex-col gap-4 overflow-hidden rounded-xl bg-neutral-100 transition-colors hover:bg-neutral-200 md:gap-16 dark:bg-neutral-800">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rich-link-content !no-underline"
+      >
+        {/* <Image
+            src={require(`app/${image}`).default}
+            alt={title}
+            className="rich-link-image"
+          /> */}
+        <img
+          src={image}
+          alt={imageAlt ?? title}
+          className="rich-link-image object-cov aspect-video"
+        />
+        <div className="flex items-start justify-between gap-2 rich-link-details p-4">
+          <div>
+            <strong className="text-md !m-0 font-bold text-neutral-800 dark:text-neutral-200 block">
+              {title}
+            </strong>
+            {subtitle && (
+              <small className="text-sm text-neutral-600 !m-0">
+                {subtitle}
+              </small>
+            )}
+          </div>
+          <ArrowIcon className="flex-shrink-0" />
+        </div>
+      </a>
+    </div>
+  )
 }
 
 let components = {
@@ -97,6 +147,7 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
+  RichLink,
 }
 
 export function CustomMDX(props) {
