@@ -101,38 +101,38 @@ function RichLink({
   imageAlt?: string
 }) {
   return (
-    <div className="flex flex-col gap-4 overflow-hidden rounded-xl bg-neutral-100 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700 md:gap-16 dark:bg-neutral-800">
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rich-link-content !no-underline"
-      >
-        {/* <Image
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rich-link-content !no-underline !text-inherit flex flex-col overflow-hidden rounded-xl bg-neutral-100 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800"
+    >
+      {/* <Image
             src={require(`app/${image}`).default}
             alt={title}
             className="rich-link-image"
           /> */}
-        <img
-          src={image}
-          alt={imageAlt ?? title}
-          className="rich-link-image object-cov aspect-video"
-        />
-        <div className="flex items-start justify-between gap-2 rich-link-details p-4">
-          <div>
-            <strong className="text-md !m-0 font-bold text-neutral-800 dark:text-neutral-200 block">
-              {title}
-            </strong>
-            {subtitle && (
-              <small className="text-sm text-neutral-600 !m-0">
-                {subtitle}
-              </small>
-            )}
-          </div>
-          <ArrowIcon className="flex-shrink-0" />
+      <img
+        src={image}
+        alt={imageAlt ?? title}
+        width={640}
+        height={360}
+        className="w-full"
+      />
+      <div className="flex items-start justify-between gap-2 rich-link-details leading-snug p-4">
+        <div>
+          <strong className="text-md !m-0 font-bold text-neutral-800 dark:text-neutral-200 block">
+            {title}
+          </strong>
+          {subtitle && (
+            <small className="text-sm dark:text-neutral-400 text-neutral-600 !m-0">
+              {subtitle}
+            </small>
+          )}
         </div>
-      </a>
-    </div>
+        <ArrowIcon className="flex-shrink-0" />
+      </div>
+    </a>
   )
 }
 
