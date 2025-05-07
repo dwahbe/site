@@ -83,11 +83,13 @@ function ThemeButton({
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false)
-
   useEffect(() => setMounted(true), [])
 
   return (
-    <div className="flex w-fit rounded-full ring-1 ring-neutral-300 dark:ring-neutral-700">
+    <div
+      className="flex w-fit rounded-full ring-1 ring-neutral-300 dark:ring-neutral-700"
+      key={mounted.toString()}
+    >
       <ThemeButton theme="system">
         <SystemIcon />
       </ThemeButton>
