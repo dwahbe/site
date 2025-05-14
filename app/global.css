@@ -164,3 +164,28 @@ h1 {
 h2 {
   @apply mb-2 mt-6 text-2xl font-medium tracking-tight;
 }
+
+details {
+  @media (prefers-reduced-motion: no-preference) {
+    interpolate-size: allow-keywords;
+  }
+
+  &::details-content {
+    opacity: 0;
+    block-size: 0;
+    overflow-y: clip;
+    transition:
+      content-visibility 0.375s allow-discrete,
+      opacity 0.375s,
+      block-size 0.375s;
+  }
+
+  &[open]::details-content {
+    opacity: 1;
+    block-size: auto;
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
