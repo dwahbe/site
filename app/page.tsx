@@ -15,8 +15,8 @@ export default function Page() {
       <header className="grid gap-6 md:grid-cols-5 md:items-center xl:items-center">
         <div className="md:col-span-3">
           <h1 className="mb-2 text-6xl md:text-6xl">Dylan&nbsp;Wahbe</h1>
-          <p className="mb-6 max-w-max rounded-full border border-[#413F2A]/20 bg-[#3E9B91] dark:border-[#3E9B91] dark:bg-[#3E9B91]/20 px-2 py-1 text-xs text-white dark:text-white">
-            SEA -> NYC -> CDMX
+          <p className="flex items-center mb-6 max-w-max rounded-full border border-[#413F2A]/20 bg-[#3E9B91] dark:border-[#3E9B91] dark:bg-[#3E9B91]/20 px-2 py-1 text-xs text-white dark:text-white">
+            SEA &rarr; NYC &rarr; CDMX
           </p>
           <p className="font-medium mb-6">
             Climate organizer and product designer.
@@ -64,7 +64,7 @@ export default function Page() {
           />
         }
       </header>
-      <details className="group mt-8 mb-8 rounded-xl p-2 border border-neutral-300 dark:border-neutral-700 border-spacing-1 open:bg-[#3E9B91]/40 dark:open:bg-[#E9F1FF]/20 transition-colors grid">
+      <details className="group mt-8 mb-8 rounded-xl p-2 border border-neutral-300 dark:border-[#3E9B91]  border-spacing-1 open:bg-[#3E9B91]/40 dark:open:bg-[#E9F1FF]/20 transition-colors grid">
         <summary className="font-sans font-medium group-open:text-dark rounded-xl transition-colors cursor-pointer pl-1 flex items-center gap-2 outline-offset-8 group-open:outline-dark overflow-clip">
           <svg
             className="text-neutral-600 dark:text-neutral-300 -rotate-45 group-open:rotate-0 transition-transform"
