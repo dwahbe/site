@@ -63,7 +63,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'bg-white font-sans text-black dark:bg-black dark:text-white',
+        'bg-[#ffefd2] font-sans text-[#413F2A] dark:bg-black dark:text-white',
         sans.variable,
         sans.className,
         serif.variable,
