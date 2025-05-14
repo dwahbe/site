@@ -31,7 +31,7 @@ export function PortfolioPosts({ posts = [] }: { posts?: any[] }) {
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex gap-4 md:gap-16 mb-6 bg-neutral-50 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
+            className="flex gap-4 md:gap-16 mb-6 bg-[#EFF4F3] dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
             style={{
               // @ts-expect-error custom properties
               '--accent-color': post.metadata.color,
