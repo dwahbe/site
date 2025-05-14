@@ -71,7 +71,7 @@ function ThemeButton({
 
   return (
     <button
-      className="rounded-full p-2 text-neutral-500 ring-1 ring-transparent hover:text-neutral-400 aria-pressed:text-neutral-800 aria-pressed:ring-neutral-300 aria-pressed:hover:text-neutral-800 dark:hover:text-neutral-300 dark:aria-pressed:text-neutral-300 dark:aria-pressed:ring-neutral-700 dark:aria-pressed:hover:text-neutral-300"
+      className="rounded-xl p-2 text-neutral-500 ring-1 ring-transparent hover:text-neutral-400 aria-pressed:text-neutral-800 aria-pressed:ring-neutral-300 aria-pressed:hover:text-neutral-800 dark:hover:text-neutral-300 dark:aria-pressed:text-neutral-300 dark:aria-pressed:ring-neutral-700 dark:aria-pressed:hover:text-neutral-300"
       aria-pressed={theme === activeTheme}
       onClick={() => setTheme(theme)}
       title={`Switch to ${theme} color mode`}
@@ -83,11 +83,12 @@ function ThemeButton({
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false)
+
   useEffect(() => setMounted(true), [])
 
   return (
     <div
-      className="flex w-fit rounded-full ring-1 ring-neutral-300 dark:ring-neutral-700"
+      className="flex w-fit rounded-xl ring-1 ring-neutral-300 dark:ring-neutral-700"
       key={mounted.toString()}
     >
       <ThemeButton theme="system">
