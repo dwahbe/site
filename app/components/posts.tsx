@@ -1,27 +1,37 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
-import { getPortfolioPosts } from 'app/portfolio/utils'
 import Image from 'next/image'
 
-export function PortfolioPosts({
-  showSummary = false,
-}: {
-  showSummary?: boolean
-}) {
-  let allPosts = getPortfolioPosts()
+export function PortfolioPosts({ posts = [] }: { posts?: any[] }) {
+  const [showPrimary, setShowPrimary] = useState(true)
 
   return (
     <div>
-      {allPosts
+      <div className="flex flex-auto justify-between items-center mb-2">
+        <h2 className="mb-6"> Work I'm proud of</h2>
+        {/* <button
+          onClick={() => setShowPrimary(!showPrimary)}
+          className="flex items-center px-4 py-3 text-white font-normal bg-[#ff4921] rounded-3xl hover:bg-[#ff4921]/80 transition-colors"
+        >
+          {showPrimary ? 'Show projects' : 'Hide projects'}
+        </button> */}
+      </div>
+      {posts
         .sort((a, b) => {
           if (a.metadata.order < b.metadata.order) {
             return -1
           }
           return 1
         })
+        .filter((post) =>
+          showPrimary ? post.metadata.primary === 'true' : true,
+        )
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex gap-4 md:gap-16 mb-6 bg-neutral-100 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
+            className="flex gap-4 md:gap-16 mb-6 bg-neutral-50 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
             style={{
               // @ts-expect-error custom properties
               '--accent-color': post.metadata.color,
