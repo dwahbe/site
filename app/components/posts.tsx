@@ -10,7 +10,8 @@ export function PortfolioPosts({ posts = [] }: { posts?: any[] }) {
   return (
     <div>
       <div className="flex flex-auto justify-between items-center mb-2">
-        <h2 className="mb-6"> Work I'm proud of</h2>
+        <h2 className="mb-4">Work I’m proud of</h2>
+
         {/* <button
           onClick={() => setShowPrimary(!showPrimary)}
           className="flex items-center px-4 py-3 text-white font-normal bg-[#ff4921] rounded-3xl hover:bg-[#ff4921]/80 transition-colors"
@@ -31,7 +32,7 @@ export function PortfolioPosts({ posts = [] }: { posts?: any[] }) {
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex gap-4 md:gap-16 mb-6 bg-[#EFF4F3] dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
+            className="flex gap-4 md:gap-16 mb-6 bg-white/40 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_var(--accent-color)]"
             style={{
               // @ts-expect-error custom properties
               '--accent-color': post.metadata.color,
@@ -49,7 +50,7 @@ export function PortfolioPosts({ posts = [] }: { posts?: any[] }) {
             </div>
             {post.metadata.previewImage ? (
               <Image
-                className=" max-w-10 max-h-10 md:col-span-2 object-contain"
+                className="max-w-12 max-h-12 md:col-span-2 object-contain"
                 src={
                   require(`app/portfolio/images/${post.metadata.previewImage}`)
                     .default

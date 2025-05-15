@@ -15,7 +15,7 @@ export default function Page() {
       <header className="grid gap-6 md:grid-cols-5 md:items-center xl:items-center">
         <div className="md:col-span-3">
           <h1 className="mb-2 text-6xl md:text-6xl">Dylan&nbsp;Wahbe</h1>
-          <p className="flex items-center mb-6 max-w-max rounded-full border border-[#413F2A]/20 bg-[#3E9B91] dark:border-[#3E9B91] dark:bg-[#3E9B91]/20 px-2 py-1 text-xs text-white dark:text-white">
+          <p className="mb-6 max-w-max rounded-full border border-[#3E9B91]/30 bg-[#3E9B91]/10 text-[#3E9B91] dark:border-[#3E9B91] dark:bg-[#3E9B91]/30 px-2.5 py-1 text-xs  dark:text-white font-medium">
             SEA &rarr; NYC &rarr; CDMX
           </p>
           <p className="font-medium mb-6">
@@ -64,10 +64,10 @@ export default function Page() {
           />
         }
       </header>
-      <details className="group mt-8 mb-8 rounded-xl p-2 border border-neutral-300 dark:border-[#3E9B91]  border-spacing-1 open:bg-[#3E9B91]/40 dark:open:bg-[#E9F1FF]/20 transition-colors grid">
+      <details className="group mt-8 mb-8 rounded-xl p-2 border border-[#3E9B91]/30 dark:border-[#3E9B91] border-spacing-1 open:bg-[#3E9B91]/40 dark:open:bg-[#3E9B91]/30 transition-colors grid">
         <summary className="font-sans font-medium group-open:text-dark rounded-xl transition-colors cursor-pointer pl-1 flex items-center gap-2 outline-offset-8 group-open:outline-dark overflow-clip">
           <svg
-            className="text-neutral-600 dark:text-neutral-300 -rotate-45 group-open:rotate-0 transition-transform"
+            className="text-[#3E9B91] dark:text-neutral-300 -rotate-45 group-open:rotate-0 transition-transform"
             fill-rule="evenodd"
             clip-rule="evenodd"
             stroke-linejoin="round"
@@ -86,17 +86,17 @@ export default function Page() {
         </summary>
         <div className="grid gap-6 md:gap-6 p-2">
           <p className="text-dark text-pretty font-mono-slabs weight-book">
-            I'm Dylan Wahbe (he/him), a climate organizer and product designer
-            from Seattle. I've always had an interest in politics and in high
+            I’m Dylan Wahbe (he/him), a climate organizer and product designer
+            from Seattle. I’ve always had an interest in politics and in high
             school began attending protests, volunteering on congressional
             races, and reading lots of Noam Chomsky. I attended NYU, studying
             Media, Culture, and Communications with a focus on political
             communcations. I also helped start the university chapter of the
             Sunrise Movement. With my fellow organizers, we succesfully
             campaigned NYU to divest their 5+ billion dollar endowment from the
-            fossil fuel industry. After graduating, I worked at HCB, Hack Club's
-            fiscal sponsorship program, as a product designer and account
-            manager.
+            fossil fuel industry. After graduating, I worked at HCB,
+            Hack&nbsp;Club’s fiscal sponsorship program, as a product designer
+            and account manager.
           </p>
           {/* <Image
             src={Portrait}
