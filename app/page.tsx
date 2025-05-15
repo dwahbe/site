@@ -24,7 +24,7 @@ export default function Page() {
             Key Advisor to&nbsp;
             <a
               href="https://www.campusclimatenetwork.org/"
-              className="hover:text-[#1e4d18]/80 hover:underline"
+              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
             >
               Campus&nbsp;Climate&nbsp;Network
             </a>
@@ -34,21 +34,21 @@ export default function Page() {
             Previously with{' '}
             <a
               href="https://www.hackclub.com/hcb/"
-              className="hover:text-[#1e4d18]/80 hover:underline"
+              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
             >
               Hack&nbsp;Club
             </a>
             ,{' '}
             <a
               href="https://www.sunrisemovement.org/"
-              className="hover:text-[#1e4d18]/80 hover:underline"
+              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
             >
               Sunrise&nbsp;Movement
             </a>
             ,{' '}
             <Link
               href="/portfolio/251-visions"
-              className="hover:text-[#1e4d18]/80 hover:underline"
+              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
             >
               251&nbsp;Visions
             </Link>
