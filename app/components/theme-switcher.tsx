@@ -59,7 +59,29 @@ function DarkIcon() {
     </svg>
   )
 }
+//Theme button - no tooltips
+// function ThemeButton({
+//   theme,
+//   children,
+// }: {
+//   theme: string
+//   children: React.ReactNode
+// }) {
+//   const { setTheme, theme: activeTheme } = useTheme()
 
+//   return (
+//     <button
+//       className="rounded-xl p-2 text-neutral-500 ring-1 ring-transparent hover:text-neutral-400 aria-pressed:text-neutral-800 aria-pressed:ring-neutral-300 aria-pressed:hover:text-neutral-800 dark:hover:text-neutral-300 dark:aria-pressed:text-neutral-300 dark:aria-pressed:ring-neutral-700 dark:aria-pressed:hover:text-neutral-300"
+//       aria-pressed={theme === activeTheme}
+//       onClick={() => setTheme(theme)}
+//       title={`Switch to ${theme} color mode`}
+//     >
+//       {children}
+//     </button>
+//   )
+// }
+
+// Theme button w/ tooltips
 function ThemeButton({
   theme,
   children,
@@ -68,15 +90,24 @@ function ThemeButton({
   children: React.ReactNode
 }) {
   const { setTheme, theme: activeTheme } = useTheme()
+  const label =
+    theme === 'system'
+      ? 'System theme'
+      : theme === 'light'
+        ? 'Light theme'
+        : 'Dark theme'
 
   return (
     <button
-      className="rounded-xl p-2 text-neutral-500 ring-1 ring-transparent hover:text-neutral-400 aria-pressed:text-neutral-800 aria-pressed:ring-neutral-300 aria-pressed:hover:text-neutral-800 dark:hover:text-neutral-300 dark:aria-pressed:text-neutral-300 dark:aria-pressed:ring-neutral-700 dark:aria-pressed:hover:text-neutral-300"
+      className="relative rounded-xl p-2 text-neutral-500 ring-1 ring-transparent hover:text-neutral-400 aria-pressed:text-neutral-800 aria-pressed:ring-neutral-300 aria-pressed:hover:text-neutral-800 dark:hover:text-neutral-300 dark:aria-pressed:text-neutral-300 dark:aria-pressed:ring-neutral-700 dark:aria-pressed:hover:text-neutral-300 group"
       aria-pressed={theme === activeTheme}
       onClick={() => setTheme(theme)}
-      title={`Switch to ${theme} color mode`}
+      type="button"
     >
       {children}
+      <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-10 z-10 whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">
+        {label}
+      </span>
     </button>
   )
 }
