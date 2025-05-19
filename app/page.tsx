@@ -87,16 +87,17 @@ export default function Page() {
         <div className="grid gap-6 md:gap-6 p-2">
           <p className="text-dark text-pretty font-mono-slabs weight-book">
             I’m Dylan Wahbe (he/him), a climate organizer and product designer
-            from Seattle. I’ve always had an interest in politics and in high
-            school began attending protests, volunteering on congressional
-            races, and reading lots of Noam Chomsky. I attended NYU, studying
-            Media, Culture, and Communications with a focus on political
-            communcations. I also helped start the university chapter of the
-            Sunrise Movement. With my fellow organizers, we succesfully
-            campaigned NYU to divest their 5+ billion dollar endowment from the
-            fossil fuel industry. After graduating, I worked at HCB,
-            Hack&nbsp;Club’s fiscal sponsorship program, as a product designer
-            and account manager.
+            from Seattle. I got into politics in high school—joining protests,
+            volunteering on congressional campaigns, and reading lots of Noam
+            Chomsky. At NYU, I studied Media, Culture, and Communications with a
+            focus on political messaging, and co-founded the university's
+            Sunrise Movement chapter. With my fellow organizers, we successfully
+            campaigned for NYU to divest its $5+ billion endowment from the
+            fossil fuel industry. After graduating, I joined Hack&nbsp;Club’s
+            fiscal sponsorship program, HCB, where I worked as a product
+            designer and account manager, helping young organizers and founders
+            launch projects. I care about building tools that support movements
+            and communities working toward climate justice.
           </p>
           {/* <Image
             src={Portrait}
