@@ -16,7 +16,7 @@ export default function Page() {
         <div className="md:col-span-3">
           <h1 className="mb-2 text-6xl md:text-6xl">Dylan&nbsp;Wahbe</h1>
           <p className="mb-6 max-w-max rounded-full border border-[#3E9B91]/30 bg-[#3E9B91]/10 text-[#3E9B91] dark:border-[#3E9B91] dark:bg-[#3E9B91]/30 px-2.5 py-1 text-xs  dark:text-white font-medium">
-            SEA &rarr; NYC &rarr; CDMX
+            Proudly from Seattle
           </p>
           <p className="font-medium mb-6">
             Climate organizer and product designer.
