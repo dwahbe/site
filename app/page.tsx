@@ -100,8 +100,7 @@ export default function Page() {
             program, HCB, where I worked as a product designer and account
             manager, helping young organizers and founders launch nonprofits. I
             care about building tools that support movements and communities
-            working toward climate justice. After 6 incredible years in NYC, I'm
-            spending the summer in Mexico City.
+            working toward climate justice.
           </p>
           {/* <Image
             src={Portrait}
