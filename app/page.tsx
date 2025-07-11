@@ -6,6 +6,7 @@ import ItsAllPlay from './itsallplay.png'
 import Coffee from './coffee.jpeg'
 import ArrowIcon from './components/arrow'
 import Link from 'next/link'
+import Badge from './components/badge'
 
 export default function Page() {
   let allPosts = getPortfolioPosts()
@@ -15,9 +16,10 @@ export default function Page() {
       <header className="grid gap-6 md:grid-cols-5 md:items-center xl:items-center">
         <div className="md:col-span-3">
           <h1 className="mb-2 text-6xl md:text-6xl">Dylan&nbsp;Wahbe</h1>
-          <p className="mb-6 max-w-max rounded-full border border-[#3E9B91]/30 bg-[#3E9B91]/10 text-[#3E9B91] dark:border-[#3E9B91] dark:bg-[#3E9B91]/30 px-2.5 py-1 text-xs  dark:text-white font-medium">
+          {/* <p className="mb-6 max-w-max rounded-full border border-[#3E9B91]/30 bg-[#3E9B91]/10 text-[#3E9B91] dark:border-[#3E9B91] dark:bg-[#3E9B91]/30 px-2.5 py-1 text-xs  dark:text-white font-medium">
             Proudly from Seattle
-          </p>
+          </p> */}
+          <Badge />
           <p className="font-medium mb-6">
             Climate organizer and product designer.
             <br />
