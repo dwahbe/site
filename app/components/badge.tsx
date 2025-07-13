@@ -26,6 +26,7 @@ const facts = [
   'Proudly from Seattle',
   'Loves Brooklyn Heights',
   'Once a barista, always a barista',
+  'Learning Spanish',
 ]
 
 export default function FactBadge() {
