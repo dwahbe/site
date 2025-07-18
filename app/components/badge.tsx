@@ -1,23 +1,3 @@
-// 'use client'
-
-// import { useState } from 'react'
-
-// const messages = ['SEA 	&rarr; NYC &rarr; CDMX', 'Proudly from Seattle', 'etc']
-// const getRandomMsg = () => messages[Math.floor(Math.random() * messages.length)]
-
-// export default function Badge(): JSX.Element {
-//   const [message, setMessage] = useState(getRandomMsg)
-//   return (
-//     <button
-//       type="button"
-//       onClick={() => setMessage(getRandomMsg)}
-//       className="mb-6 max-w-max rounded-full border border-[#3E9B91]/30 bg-[#3E9B91]/10 text-[#3E9B91] dark:border-[#3E9B91] dark:bg-[#3E9B91]/30 px-2.5 py-1 text-xs  dark:text-white font-medium"
-//     >
-//       {message}
-//     </button>
-//   )
-// }
-
 'use client'
 
 import { useState, useEffect } from 'react'
