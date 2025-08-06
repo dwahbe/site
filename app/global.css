@@ -189,3 +189,43 @@ details {
 summary::-webkit-details-marker {
   display: none;
 }
+
+@keyframes signature-dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes signature-fill {
+  to {
+    fill-opacity: 1;
+    stroke-width: 0;
+  }
+}
+
+.signature {
+  display: inline-block;
+  height: 1em;
+}
+
+.signature text {
+  font-family: var(--font-instrument-serif);
+  fill: currentColor;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .signature-letter {
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: var(--dash, 100);
+    stroke-dashoffset: var(--dash, 100);
+    fill-opacity: 0;
+    animation:
+      signature-dash 0.25s ease forwards,
+      signature-fill 0.25s ease forwards 0.25s;
+    animation-delay: calc(var(--index) * 0.1s),
+      calc(var(--index) * 0.1s + 0.25s);
+  }
+}
