@@ -205,7 +205,9 @@ summary::-webkit-details-marker {
 
 .signature {
   display: inline-block;
-  height: 1em;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .signature text {

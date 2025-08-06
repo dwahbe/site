@@ -14,7 +14,7 @@ export function Signature() {
   }, [])
 
   return (
-    <svg className="signature" viewBox="0 0 700 80" aria-hidden="true">
+    <svg className="signature" viewBox="0 0 500 80" aria-hidden="true">
       <text x="0" y="60" fontSize="80">
         {Array.from('Dylan Wahbe').map((letter, index) => (
           <tspan
