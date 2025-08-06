@@ -7,6 +7,7 @@ const facts = [
   'Loves Brooklyn Heights',
   'Once a barista, always a barista',
   'Learning Spanish',
+  'Watching Succession',
 ]
 
 export default function FactBadge() {
