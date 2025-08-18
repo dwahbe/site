@@ -35,6 +35,16 @@ export default function Page() {
             </a>
             .
           </p>
+          <p>
+            Currently building{' '}
+            <a
+              href="https://www.climateriver.org"
+              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
+            >
+              Climate&nbsp;River
+            </a>
+            .
+          </p>
           <p className="font-light">
             Previously with{' '}
             <a
