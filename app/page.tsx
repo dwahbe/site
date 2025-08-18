@@ -34,8 +34,7 @@ export default function Page() {
               Campus&nbsp;Climate&nbsp;Network
             </a>
             .
-          </p>
-          <p>
+            <br />
             Currently building{' '}
             <a
               href="https://www.climateriver.org"
