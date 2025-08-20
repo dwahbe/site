@@ -44,7 +44,7 @@ export default function Footer() {
         <ThemeSwitcher />
         <div className="flex items-center gap-1">
           <p className="text-sm text-neutral-600 dark:text-neutral-300">
-            Last updated May, 2025
+            Last updated August, 2025
           </p>
           <a
             href="https://github.com/dwahbe/site"
@@ -72,11 +72,6 @@ export default function Footer() {
           </a>
         </div>
       </section>
-      {/*
-        <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-          © {new Date().getFullYear()} MIT Licensed
-        </p>
-      */}
     </footer>
   )
 }
