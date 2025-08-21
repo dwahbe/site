@@ -7,7 +7,6 @@ import Coffee from './coffee.jpeg'
 import ArrowIcon from './components/arrow'
 import Link from 'next/link'
 import Badge from './components/badge'
-import { Signature } from './components/signature'
 import type { CSSProperties } from 'react'
 
 export default function Page() {
@@ -17,15 +16,12 @@ export default function Page() {
     <section>
       <header className="grid gap-6 md:grid-cols-5 md:items-center xl:items-center">
         <div className="md:col-span-3">
-          <h1 className="mb-2 text-6xl md:text-6xl">
-            <span className="sr-only">Dylan&nbsp;Wahbe</span>
-            <Signature />
-          </h1>
-
+          <h1 className="mb-2 text-6xl md:text-6xl">Dylan&nbsp;Wahbe</h1>
           <Badge />
-          <p className="font-medium mb-6">
+          <p className="font-medium mt-2 mb-4">
             Climate organizer and product designer.
-            <br />
+          </p>
+          <p className="font-medium mb-4">
             Key Advisor to&nbsp;
             <a
               href="https://www.campusclimatenetwork.org/"
@@ -34,7 +30,8 @@ export default function Page() {
               Campus&nbsp;Climate&nbsp;Network
             </a>
             .
-            <br />
+          </p>
+          <p className="font-medium mb-6">
             Currently building{' '}
             <a
               href="https://www.climateriver.org"
@@ -44,7 +41,7 @@ export default function Page() {
             </a>
             .
           </p>
-          <p className="font-light">
+          {/* <p className="font-light">
             Previously with{' '}
             <a
               href="https://www.hackclub.com/hcb/"
@@ -67,7 +64,7 @@ export default function Page() {
               251&nbsp;Visions
             </Link>
             .
-          </p>
+          </p> */}
         </div>
         {
           <Image
