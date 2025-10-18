@@ -8,6 +8,7 @@ const facts = [
   'Once a barista, always a barista',
   'Learning Spanish',
   'Watching Succession',
+  'Proud UNAM Alum',
 ]
 
 export default function FactBadge() {
