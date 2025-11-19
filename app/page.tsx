@@ -110,8 +110,12 @@ export default function Page() {
             After graduating, I joined Hack&nbsp;Club’s fiscal sponsorship
             program, HCB, where I worked as a product designer and account
             manager, helping young organizers and founders launch nonprofits. I
-            care about building tools that support movements and communities
-            working toward climate justice.
+            left Hack Club in May 2025 to move to Mexico City and enrolled in a
+            program at Universidad Nacional Autónoma de México (UNAM). Since
+            then, I have been building{' '}
+            <a href="https://climateriver.org">Climate River</a>, a climate news
+            aggregator. I care about creating tools that support movements and
+            communities working toward climate justice.
           </p>
           {/* <Image
             src={Portrait}
