@@ -45,13 +45,14 @@ const sans = Instrument_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-instrument-sans',
+  weight: ['400', '500', '700'],
 })
 
 const serif = Instrument_Serif({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-instrument-serif',
-  weight: '400',
+  weight: ['400'],
 })
 
 export default function RootLayout({
