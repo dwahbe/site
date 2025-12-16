@@ -25,7 +25,7 @@ export default function Page() {
             Key Advisor to&nbsp;
             <a
               href="https://www.campusclimatenetwork.org/"
-              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
+              className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
             >
               Campus&nbsp;Climate&nbsp;Network
             </a>
@@ -35,7 +35,7 @@ export default function Page() {
             Currently building{' '}
             <a
               href="https://www.climateriver.org"
-              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
+              className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
             >
               Climate&nbsp;River
             </a>
@@ -113,9 +113,14 @@ export default function Page() {
             left Hack Club in May 2025 to move to Mexico City and enrolled in a
             program at Universidad Nacional Autónoma de México (UNAM). Since
             then, I have been building{' '}
-            <a href="https://climateriver.org">Climate River</a>, a climate news
-            aggregator. I care about creating tools that support movements and
-            communities working toward climate justice.
+            <a
+              href="https://climateriver.org"
+              className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
+            >
+              Climate River
+            </a>
+            , a climate news aggregator. I care about creating tools that
+            support movements and communities working toward climate justice.
           </p>
           {/* <Image
             src={Portrait}
