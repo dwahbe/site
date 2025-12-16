@@ -84,9 +84,11 @@ function DarkIcon() {
 // Theme button w/ tooltips
 function ThemeButton({
   theme,
+  mounted,
   children,
 }: {
   theme: string
+  mounted: boolean
   children: React.ReactNode
 }) {
   const { setTheme, theme: activeTheme } = useTheme()
@@ -100,7 +102,7 @@ function ThemeButton({
   return (
     <button
       className="relative rounded-xl p-2 text-neutral-500 ring-1 ring-transparent hover:text-neutral-400 aria-pressed:text-neutral-800 aria-pressed:ring-neutral-300 aria-pressed:hover:text-neutral-800 dark:hover:text-neutral-300 dark:aria-pressed:text-neutral-300 dark:aria-pressed:ring-neutral-700 dark:aria-pressed:hover:text-neutral-300 group"
-      aria-pressed={theme === activeTheme}
+      aria-pressed={mounted ? theme === activeTheme : undefined}
       onClick={() => setTheme(theme)}
       type="button"
     >
@@ -118,17 +120,14 @@ export default function ThemeSwitcher() {
   useEffect(() => setMounted(true), [])
 
   return (
-    <div
-      className="flex w-fit rounded-xl ring-1 ring-neutral-300 dark:ring-neutral-700"
-      key={mounted.toString()}
-    >
-      <ThemeButton theme="system">
+    <div className="flex w-fit rounded-xl ring-1 ring-neutral-300 dark:ring-neutral-700">
+      <ThemeButton theme="system" mounted={mounted}>
         <SystemIcon />
       </ThemeButton>
-      <ThemeButton theme="light">
+      <ThemeButton theme="light" mounted={mounted}>
         <LightIcon />
       </ThemeButton>
-      <ThemeButton theme="dark">
+      <ThemeButton theme="dark" mounted={mounted}>
         <DarkIcon />
       </ThemeButton>
     </div>
