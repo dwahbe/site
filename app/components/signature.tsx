@@ -3,7 +3,7 @@
 import { useEffect, useRef, type CSSProperties } from 'react'
 
 export function Signature() {
-  const lettersRef = useRef<SVGTextElement[]>([])
+  const lettersRef = useRef<(SVGTSpanElement | null)[]>([])
 
   useEffect(() => {
     lettersRef.current.forEach((el) => {
@@ -19,7 +19,7 @@ export function Signature() {
         {Array.from('Dylan Wahbe').map((letter, index) => (
           <tspan
             key={index}
-            ref={(el) => (lettersRef.current[index] = el as SVGTextElement)}
+            ref={(el) => { lettersRef.current[index] = el }}
             className="signature-letter"
             style={{ '--index': index } as CSSProperties}
           >
