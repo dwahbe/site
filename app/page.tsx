@@ -79,10 +79,10 @@ export default function Page() {
         <summary className="font-sans font-medium group-open:text-dark rounded-xl transition-colors cursor-pointer pl-1 flex items-center gap-2 outline-offset-8 group-open:outline-dark overflow-clip">
           <svg
             className="text-[#3E9B91] dark:text-neutral-300 -rotate-45 group-open:rotate-0 transition-transform"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            stroke-linejoin="round"
-            stroke-miterlimit="1.414"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            strokeLinejoin="round"
+            strokeMiterlimit="1.414"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             viewBox="0 0 32 32"

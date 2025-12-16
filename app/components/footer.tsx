@@ -55,10 +55,10 @@ export default function Footer() {
           >
             <span className="sr-only">GitHub</span>
             <svg
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              stroke-linejoin="round"
-              stroke-miterlimit="1.414"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              strokeLinejoin="round"
+              strokeMiterlimit="1.414"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
               preserveAspectRatio="xMidYMid meet"
