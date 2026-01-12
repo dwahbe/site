@@ -14,14 +14,15 @@ export const metadata: Metadata = {
     default: 'Dylan Wahbe',
     template: '%s – Dylan Wahbe',
   },
-  description: 'This is my portfolio.',
+  description: 'Dylan Wahbe is a product manager and climate organizer building tools for movements and communities working toward climate justice.',
   openGraph: {
     title: 'Dylan Wahbe',
-    description: 'This is my portfolio.',
+    description: 'Dylan Wahbe is a product manager and climate organizer building tools for movements and communities working toward climate justice.',
     url: baseUrl,
     siteName: 'Dylan Wahbe',
     locale: 'en_US',
     type: 'website',
+    images: [{ url: `${baseUrl}/og?title=Dylan%20Wahbe` }],
   },
   robots: {
     index: true,
