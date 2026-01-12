@@ -19,7 +19,7 @@ export default function Page() {
           <h1 className="mb-2 text-6xl md:text-6xl">Dylan&nbsp;Wahbe</h1>
           <Badge />
           <p className="font-medium mt-2 mb-4">
-            Climate organizer and product designer.
+            Product manager and climate organizer.
           </p>
           <p className="font-medium mb-4">
             Key Advisor to&nbsp;
@@ -131,6 +131,44 @@ export default function Page() {
       </details>
       <div className="mb-8">
         <PortfolioPosts posts={allPosts} />
+      </div>
+      <div className="mb-8">
+        <h2 className="mb-4">A few smaller, personal projects</h2>
+        <a
+          href="https://seattleatlas.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex justify-between items-start gap-4 md:gap-16 mb-6 bg-white/40 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_#3E9B91]"
+        >
+          <div className="flex flex-col">
+            <h3 className="text-balance text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
+              Seattle Atlas
+            </h3>
+            <p className="text-neutral-600 text-sm dark:text-neutral-400">
+              An interactive map of Seattle, highlighting zoning laws, bike
+              infastructure, and public transit.
+            </p>
+          </div>
+          <ArrowIcon className="text-neutral-400 shrink-0" />
+        </a>
+        <a
+          href="https://cozyjobtracker.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex justify-between items-start gap-4 md:gap-16 mb-6 bg-white/40 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_#3E9B91]"
+        >
+          <div className="flex flex-col">
+            <h3 className="text-balance text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
+              Cozy Job Tracker
+            </h3>
+            <p className="text-neutral-600 text-sm dark:text-neutral-400">
+              Free job tracker that automatically parses job postings, pulls out
+              key information, and let's users build a custom job board with
+              their friends.
+            </p>
+          </div>
+          <ArrowIcon className="text-neutral-400 shrink-0" />
+        </a>
       </div>
     </section>
   )

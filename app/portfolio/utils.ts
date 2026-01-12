@@ -10,6 +10,7 @@ type Metadata = {
   link?: string
   previewImage?: string
   primary?: boolean
+  hidden?: boolean
 }
 
 function parseFrontmatter(fileContent: string) {

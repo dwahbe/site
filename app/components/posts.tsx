@@ -26,6 +26,7 @@ export function PortfolioPosts({ posts = [] }: { posts?: any[] }) {
           }
           return 1
         })
+        .filter((post) => post.metadata.hidden !== 'true')
         .filter((post) =>
           showPrimary ? post.metadata.primary === 'true' : true,
         )
