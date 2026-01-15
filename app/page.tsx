@@ -146,7 +146,7 @@ export default function Page() {
             </h3>
             <p className="text-neutral-600 text-sm dark:text-neutral-400">
               An interactive map of Seattle, highlighting zoning laws, bike
-              infastructure, and public transit.
+              infrastructure, and public transit.
             </p>
           </div>
           <ArrowIcon className="text-neutral-400 shrink-0" />
@@ -163,7 +163,7 @@ export default function Page() {
             </h3>
             <p className="text-neutral-600 text-sm dark:text-neutral-400">
               Free job tracker that automatically parses job postings, pulls out
-              key information, and let's users build a custom job board with
+              key information, and lets users build a custom job board with
               their friends.
             </p>
           </div>
