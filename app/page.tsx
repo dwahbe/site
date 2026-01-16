@@ -134,7 +134,7 @@ export default function Page() {
       <div className="mb-8">
         <h2 className="mb-4">A few smaller, personal projects</h2>
         <a
-          href="https://seattleatlas.org"
+          href="https://seattleatlas.org/map"
           target="_blank"
           rel="noopener noreferrer"
           className="flex justify-between items-start gap-4 md:gap-16 mb-6 bg-white/40 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_#3E9B91]"
