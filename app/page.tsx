@@ -29,10 +29,8 @@ export default function Page() {
             >
               Campus&nbsp;Climate&nbsp;Network
             </a>
-            .
-          </p>
-          <p className="font-medium mb-6">
-            Currently building{' '}
+            , <br />
+            building{' '}
             <a
               href="https://www.climateriver.org"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
@@ -41,6 +39,7 @@ export default function Page() {
             </a>
             .
           </p>
+          <p className="font-medium mb-6">Based in London, UK.</p>
           {/* <p className="font-light">
             Previously with{' '}
             <a
