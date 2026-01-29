@@ -22,7 +22,7 @@ export default function Page() {
             Product manager and climate organizer.
           </p>
           <p className="font-medium mb-4">
-            Key Advisor to&nbsp;
+            Working at {''}
             <a
               href="https://www.campusclimatenetwork.org/"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
@@ -96,7 +96,7 @@ export default function Page() {
         </summary>
         <div className="grid gap-6 md:gap-6 p-2 text-dark text-pretty font-mono-slabs weight-book">
           <p>
-            I’m Dylan Wahbe (he/him), a climate organizer and product designer
+            I’m Dylan Wahbe (he/him), a product manager and climate organizer
             from Seattle. I got into politics in high school—joining protests,
             volunteering on congressional campaigns, and reading lots of Noam
             Chomsky. At NYU, I studied Media, Culture, and Communications with a
@@ -107,11 +107,19 @@ export default function Page() {
           </p>
           <p>
             After graduating, I joined Hack&nbsp;Club’s fiscal sponsorship
-            program, HCB, where I worked as a product designer and account
+            program, HCB, where I worked as a product manager and account
             manager, helping young organizers and founders launch nonprofits. I
-            left Hack Club in May 2025 to move to Mexico City and enrolled in a
-            program at Universidad Nacional Autónoma de México (UNAM). Since
-            then, I have been building{' '}
+            left Hack Club in May 2025 to move to Mexico City, where I enrolled
+            in a program at Universidad Nacional Autónoma de México (UNAM) for
+            the latter half of 2025. In early 2026, I moved to London. I
+            currently work at{' '}
+            <a
+              href="https://campusclimatenetwork.org"
+              className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
+            >
+              Campus Climate Network
+            </a>{' '}
+            and am building{' '}
             <a
               href="https://climateriver.org"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
@@ -119,7 +127,7 @@ export default function Page() {
               Climate River
             </a>
             , a climate news aggregator. I care about creating tools that
-            support movements and communities working toward climate justice.
+            support movements and communities working toward justice.
           </p>
           {/* <Image
             src={Portrait}
