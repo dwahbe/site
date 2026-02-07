@@ -98,12 +98,12 @@ export default function Page() {
           <p>
             I’m Dylan Wahbe (he/him), a product manager and climate organizer
             from Seattle. I got into politics in high school—joining protests,
-            volunteering on congressional campaigns, and reading lots of Noam
-            Chomsky. At NYU, I studied Media, Culture, and Communications with a
-            focus on political messaging, and co-founded the university's
-            Sunrise Movement chapter. With my fellow organizers, we successfully
-            campaigned for NYU to divest its $5+ billion endowment from the
-            fossil fuel industry.
+            volunteering on congressional campaigns, and reading lots of
+            political texts. At NYU, I studied Media, Culture, and
+            Communications with a focus on political messaging, and co-founded
+            the university's Sunrise Movement chapter. With my fellow
+            organizers, we successfully campaigned for NYU to divest its $5+
+            billion endowment from the fossil fuel industry.
           </p>
           <p>
             After graduating, I joined Hack&nbsp;Club’s fiscal sponsorship
