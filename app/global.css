@@ -255,7 +255,7 @@ summary::-webkit-details-marker {
     animation:
       signature-dash 0.25s ease forwards,
       signature-fill 0.25s ease forwards 0.25s;
-    animation-delay: calc(var(--index) * 0.1s),
-      calc(var(--index) * 0.1s + 0.25s);
+    animation-delay:
+      calc(var(--index) * 0.1s), calc(var(--index) * 0.1s + 0.25s);
   }
 }

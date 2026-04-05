@@ -15,11 +15,7 @@ export default function Page() {
       <h1 className="text-4xl md:text-5xl mb-8">Portfolio</h1>
       <PortfolioPosts posts={workPosts} heading="Work" />
       <div className="mt-8">
-        <PortfolioPosts
-          posts={projectPosts}
-          heading="Projects"
-          linkExternal
-        />
+        <PortfolioPosts posts={projectPosts} heading="Projects" linkExternal />
       </div>
     </section>
   )

@@ -19,7 +19,9 @@ export function Signature() {
         {Array.from('Dylan Wahbe').map((letter, index) => (
           <tspan
             key={index}
-            ref={(el) => { lettersRef.current[index] = el }}
+            ref={(el) => {
+              lettersRef.current[index] = el
+            }}
             className="signature-letter"
             style={{ '--index': index } as CSSProperties}
           >
