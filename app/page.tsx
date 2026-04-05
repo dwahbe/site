@@ -1,16 +1,16 @@
-import { getPortfolioPosts } from 'app/portfolio/utils'
+import { getWorkPosts, getProjectPosts } from 'app/portfolio/utils'
 import { PortfolioPosts } from 'app/components/posts'
 import Image from 'next/image'
 import Portrait from './profilephoto.jpg'
-import ItsAllPlay from './itsallplay.png'
-import Coffee from './coffee.jpeg'
-import ArrowIcon from './components/arrow'
 import Link from 'next/link'
 import Badge from './components/badge'
 import type { CSSProperties } from 'react'
 
 export default function Page() {
-  let allPosts = getPortfolioPosts()
+  let workPosts = getWorkPosts()
+    .filter((post) => post.metadata.hidden !== 'true')
+    .sort((a, b) => a.metadata.order - b.metadata.order)
+  let projectPosts = getProjectPosts()
 
   return (
     <section>
@@ -40,34 +40,10 @@ export default function Page() {
             .
           </p>
           <p className="font-medium mb-6">Based in London, UK.</p>
-          {/* <p className="font-light">
-            Previously with{' '}
-            <a
-              href="https://www.hackclub.com/hcb/"
-              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
-            >
-              Hack&nbsp;Club
-            </a>
-            ,{' '}
-            <a
-              href="https://www.sunrisemovement.org/"
-              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
-            >
-              Sunrise&nbsp;Movement
-            </a>
-            ,{' '}
-            <Link
-              href="/portfolio/251-visions"
-              className="hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91] hover:underline"
-            >
-              251&nbsp;Visions
-            </Link>
-            .
-          </p> */}
         </div>
         {
           <Image
-            className="max-w-64 rounded-2xl md:col-span-2"
+            className="max-w-56 md:max-w-full rounded-2xl md:col-span-2"
             src={Portrait}
             alt="Portrait of Dylan Wahbe"
             placeholder="blur"
@@ -96,7 +72,7 @@ export default function Page() {
         </summary>
         <div className="grid gap-6 md:gap-6 p-2 text-dark text-pretty font-mono-slabs weight-book">
           <p>
-            I’m Dylan Wahbe (he/him), a product manager and climate organizer
+            I'm Dylan Wahbe (he/him), a product manager and climate organizer
             from Seattle. I got into politics in high school—joining protests,
             volunteering on congressional campaigns, and reading lots of
             political texts. At NYU, I studied Media, Culture, and
@@ -106,7 +82,7 @@ export default function Page() {
             billion endowment from the fossil fuel industry.
           </p>
           <p>
-            After graduating, I joined Hack&nbsp;Club’s fiscal sponsorship
+            After graduating, I joined Hack&nbsp;Club's fiscal sponsorship
             program, HCB, where I worked as a product manager and account
             manager, helping young organizers and founders launch nonprofits. I
             left Hack Club in May 2025 to move to Mexico City, where I enrolled
@@ -129,53 +105,47 @@ export default function Page() {
             , a climate news aggregator. I care about creating tools that
             support movements and communities working toward justice.
           </p>
-          {/* <Image
-            src={Portrait}
-            alt="Photo of Dylan at a protest"
-            className="w-full rounded-lg"
-          /> */}
         </div>
       </details>
       <div className="mb-8">
-        <PortfolioPosts posts={allPosts} />
+        <h2 className="mb-4">Teams I've been a part of</h2>
+        <div className="grid grid-cols-[1fr_auto] md:grid-cols-[1fr_1fr_auto] gap-x-4 border-y border-neutral-200 dark:border-neutral-700">
+          {workPosts.map((work, i) => (
+            <Link
+              key={work.slug}
+              href={`/portfolio/${work.slug}`}
+              className={`col-span-full grid grid-cols-subgrid items-center py-4 transition-colors hover:text-[var(--team-color)] ${
+                i < workPosts.length - 1
+                  ? 'border-b border-neutral-200 dark:border-neutral-700'
+                  : ''
+              }`}
+              style={{ '--team-color': work.metadata.color } as CSSProperties}
+            >
+              <span className="font-medium text-lg tracking-tight flex items-center gap-3">
+                <Image
+                  src={
+                    require(`app/portfolio/images/${work.metadata.logo}`)
+                      .default
+                  }
+                  alt={`${work.metadata.title} logo`}
+                  className="size-8 rounded-md object-contain"
+                  width={32}
+                  height={32}
+                />
+                {work.metadata.title}
+              </span>
+              <span className="hidden md:block text-sm text-neutral-500 dark:text-neutral-400">
+                {work.metadata.role}
+              </span>
+              <span className="text-sm text-neutral-500 dark:text-neutral-400 tabular-nums text-right">
+                {work.metadata.years}
+              </span>
+            </Link>
+          ))}
+        </div>
       </div>
       <div className="mb-8">
-        <h2 className="mb-4">A few smaller, personal projects</h2>
-        <a
-          href="https://seattleatlas.org/map"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex justify-between items-start gap-4 md:gap-16 mb-6 bg-white/40 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_#3E9B91]"
-        >
-          <div className="flex flex-col">
-            <h3 className="text-balance text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
-              Seattle Atlas
-            </h3>
-            <p className="text-neutral-600 text-sm dark:text-neutral-400">
-              An interactive map of Seattle, highlighting zoning laws, bike
-              infrastructure, and public transit.
-            </p>
-          </div>
-          <ArrowIcon className="text-neutral-400 shrink-0" />
-        </a>
-        <a
-          href="https://cozyjobtracker.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex justify-between items-start gap-4 md:gap-16 mb-6 bg-white/40 dark:bg-neutral-800 transition-shadow p-4 rounded-xl hover:shadow-[0_0_0_2px_#3E9B91]"
-        >
-          <div className="flex flex-col">
-            <h3 className="text-balance text-neutral-900 dark:text-neutral-100 tracking-tight font-medium">
-              Cozy Job Tracker
-            </h3>
-            <p className="text-neutral-600 text-sm dark:text-neutral-400">
-              Free job tracker that automatically parses job postings, pulls out
-              key information, and lets users build a custom job board with
-              their friends.
-            </p>
-          </div>
-          <ArrowIcon className="text-neutral-400 shrink-0" />
-        </a>
+        <PortfolioPosts posts={projectPosts} heading="Projects" linkExternal />
       </div>
     </section>
   )

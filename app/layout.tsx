@@ -14,10 +14,12 @@ export const metadata: Metadata = {
     default: 'Dylan Wahbe',
     template: '%s – Dylan Wahbe',
   },
-  description: 'Dylan Wahbe is a product manager and climate organizer building tools for movements and communities working toward climate justice.',
+  description:
+    'Dylan Wahbe is a product manager and climate organizer building tools for movements and communities working toward climate justice.',
   openGraph: {
     title: 'Dylan Wahbe',
-    description: 'Dylan Wahbe is a product manager and climate organizer building tools for movements and communities working toward climate justice.',
+    description:
+      'Dylan Wahbe is a product manager and climate organizer building tools for movements and communities working toward climate justice.',
     url: baseUrl,
     siteName: 'Dylan Wahbe',
     locale: 'en_US',
@@ -65,14 +67,14 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'bg-[#f9f0cd] font-sans text-[#343331] dark:bg-[#1C1B1A] dark:text-white',
+        'bg-[#FBF8F6] font-sans text-[#343331] dark:bg-[#1C1B1A] dark:text-white',
         sans.variable,
         sans.className,
         serif.variable,
       )}
       suppressHydrationWarning
     >
-      <body className="mx-4 mt-8 max-w-2xl antialiased md:mx-auto">
+      <body className="mx-4 mt-8 max-w-3xl antialiased md:mx-auto">
         <Providers>
           <main className="mt-6 flex min-w-1 flex-auto flex-col px-2 md:mt-12 md:px-0">
             {/* <Navbar /> */}

@@ -165,6 +165,34 @@ h2 {
   @apply mb-2 mt-6 text-2xl font-medium tracking-tight;
 }
 
+.gradient-hover-border {
+  position: relative;
+}
+
+.gradient-hover-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(0.75rem + 2px);
+  background: var(--hover-gradient);
+  padding: 2px;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.gradient-hover-border:hover::before {
+  opacity: 1;
+}
+
 details {
   @media (prefers-reduced-motion: no-preference) {
     interpolate-size: allow-keywords;

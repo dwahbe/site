@@ -1,12 +1,12 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
-import { formatDate, getPortfolioPosts } from 'app/portfolio/utils'
+import { formatDate, getWorkPosts } from 'app/portfolio/utils'
 import { baseUrl } from 'app/sitemap'
 import ArrowIcon from 'app/components/arrow'
 import Image from 'next/image'
 
 export async function generateStaticParams() {
-  let posts = getPortfolioPosts()
+  let posts = getWorkPosts()
 
   return posts.map((post) => ({
     slug: post.slug,
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
-  let post = getPortfolioPosts().find((post) => post.slug === slug)
+  let post = getWorkPosts().find((post) => post.slug === slug)
   if (!post) {
     return
   }
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Blog({ params }) {
   const { slug } = await params
-  let post = getPortfolioPosts().find((post) => post.slug === slug)
+  let post = getWorkPosts().find((post) => post.slug === slug)
 
   if (!post) {
     notFound()

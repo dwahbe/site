@@ -1,9 +1,9 @@
-import { getPortfolioPosts } from 'app/portfolio/utils'
+import { getWorkPosts } from 'app/portfolio/utils'
 
 export const baseUrl = 'https://dylanwahbe.com'
 
 export default async function sitemap() {
-  let blogs = getPortfolioPosts().map((post) => ({
+  let work = getWorkPosts().map((post) => ({
     url: `${baseUrl}/portfolio/${post.slug}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
@@ -13,5 +13,5 @@ export default async function sitemap() {
     lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  return [...routes, ...blogs]
+  return [...routes, ...work]
 }

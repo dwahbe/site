@@ -8,9 +8,14 @@ type Metadata = {
   image?: string
   color?: string
   link?: string
+  heroImage?: string
   previewImage?: string
-  primary?: boolean
-  hidden?: boolean
+  date?: string
+  hidden?: string
+  gradientColors?: string
+  role?: string
+  years?: string
+  logo?: string
 }
 
 function parseFrontmatter(fileContent: string) {
@@ -54,8 +59,12 @@ function getMDXData(dir) {
   })
 }
 
-export function getPortfolioPosts() {
-  return getMDXData(path.join(process.cwd(), 'app', 'portfolio', 'posts'))
+export function getWorkPosts() {
+  return getMDXData(path.join(process.cwd(), 'app', 'portfolio', 'work'))
+}
+
+export function getProjectPosts() {
+  return getMDXData(path.join(process.cwd(), 'app', 'portfolio', 'projects'))
 }
 
 export function formatDate(date: string, includeRelative = false) {
