@@ -5,11 +5,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-bun dev        # Start dev server
-bun run build  # Production build (also serves as typecheck)
+bun dev          # Start dev server
+bun run build    # Production build (also serves as typecheck)
+bun run lint     # ESLint (eslint-config-next)
+bun run format   # Prettier auto-format
 ```
-
-No dedicated lint or test commands exist. Use `bun run build` as the primary sanity check.
 
 ## Architecture
 
@@ -18,6 +18,7 @@ This is a personal portfolio site (dylanwahbe.com) built with **Next.js 16 App R
 ### Content System
 
 Portfolio content is split into two MDX directories:
+
 - `app/portfolio/work/` — detailed case studies with individual pages (linked internally)
 - `app/portfolio/projects/` — shorter entries that link externally
 
