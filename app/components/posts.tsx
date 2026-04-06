@@ -59,9 +59,11 @@ export function PortfolioPosts({
 function ProjectCard({
   post,
   linkExternal = false,
+  priority = false,
 }: {
   post: CardPost
   linkExternal?: boolean
+  priority?: boolean
 }) {
   const hasGradient = !!post.metadata.gradientColors
   const href =
@@ -75,6 +77,8 @@ function ProjectCard({
       src={resolveImage(post.metadata.heroImage)}
       alt={post.metadata.title}
       fill
+      sizes="(min-width: 768px) 50vw, 100vw"
+      priority={priority}
     />
   ) : null
 
@@ -158,11 +162,12 @@ function CardGrid({
     <>
       {/* Mobile: single column */}
       <div className="flex flex-col gap-6 md:hidden">
-        {posts.map((post) => (
+        {posts.map((post, i) => (
           <ProjectCard
             key={post.slug}
             post={post}
             linkExternal={linkExternal}
+            priority={i < 4}
           />
         ))}
       </div>
@@ -171,22 +176,24 @@ function CardGrid({
         <div className="flex flex-col gap-6">
           {posts
             .filter((_, i) => i % 2 === 0)
-            .map((post) => (
+            .map((post, i) => (
               <ProjectCard
                 key={post.slug}
                 post={post}
                 linkExternal={linkExternal}
+                priority={i < 2}
               />
             ))}
         </div>
         <div className="flex flex-col gap-6 mt-16">
           {posts
             .filter((_, i) => i % 2 === 1)
-            .map((post) => (
+            .map((post, i) => (
               <ProjectCard
                 key={post.slug}
                 post={post}
                 linkExternal={linkExternal}
+                priority={i < 2}
               />
             ))}
         </div>
