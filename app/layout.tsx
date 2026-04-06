@@ -74,7 +74,7 @@ export default function RootLayout({
       )}
       suppressHydrationWarning
     >
-      <body className="mx-4 mt-8 max-w-3xl antialiased md:mx-auto">
+      <body className="mx-4 mt-8 max-w-4xl antialiased md:mx-auto">
         <Providers>
           <main className="mt-6 flex min-w-1 flex-auto flex-col px-2 md:mt-12 md:px-0">
             {/* <Navbar /> */}

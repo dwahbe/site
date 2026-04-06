@@ -43,7 +43,7 @@ export default function Page() {
         </div>
         {
           <Image
-            className="max-w-56 md:max-w-full rounded-2xl md:col-span-2"
+            className="max-w-56 md:max-w-56 rounded-2xl md:col-span-2 md:justify-self-end"
             src={Portrait}
             alt="Portrait of Dylan Wahbe"
             placeholder="blur"
@@ -109,7 +109,7 @@ export default function Page() {
       </details>
       <div className="mb-8">
         <h2 className="mb-4">Teams I've been a part of</h2>
-        <div className="grid grid-cols-[1fr_auto] md:grid-cols-[1fr_1fr_auto] gap-x-4 border-y border-neutral-200 dark:border-neutral-700">
+        <div className="grid grid-cols-[1fr_auto] gap-x-4 border-y border-neutral-200 dark:border-neutral-700">
           {workPosts.map((work, i) => (
             <Link
               key={work.slug}
@@ -133,9 +133,6 @@ export default function Page() {
                   height={32}
                 />
                 {work.metadata.title}
-              </span>
-              <span className="hidden md:block text-sm text-neutral-500 dark:text-neutral-400">
-                {work.metadata.role}
               </span>
               <span className="text-sm text-neutral-500 dark:text-neutral-400 tabular-nums text-right">
                 {work.metadata.years}
