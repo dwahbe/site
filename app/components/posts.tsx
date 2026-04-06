@@ -1,6 +1,25 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+type CardMetadata = {
+  title: string
+  summary: string
+  color: string
+  link?: string
+  date?: string
+  heroImage?: string
+  previewImage?: string
+  heroBackground?: string
+  gradientColors?: string
+  hidden?: string
+}
+
+type CardPost = {
+  metadata: CardMetadata
+  slug: string
+  content: string
+}
+
 function resolveImage(filename: string) {
   return filename.startsWith('/')
     ? filename
@@ -12,7 +31,7 @@ export function PortfolioPosts({
   heading = "Work I'm proud of",
   linkExternal = false,
 }: {
-  posts?: any[]
+  posts?: CardPost[]
   heading?: string
   linkExternal?: boolean
 }) {
@@ -23,8 +42,12 @@ export function PortfolioPosts({
         linkExternal={linkExternal}
         posts={[...posts]
           .sort((a, b) => {
-            const dateA = parseInt(a.metadata.date || '0')
-            const dateB = parseInt(b.metadata.date || '0')
+            const dateA = a.metadata.date
+              ? new Date(a.metadata.date).getTime()
+              : 0
+            const dateB = b.metadata.date
+              ? new Date(b.metadata.date).getTime()
+              : 0
             return dateB - dateA
           })
           .filter((post) => post.metadata.hidden !== 'true')}
@@ -37,7 +60,7 @@ function ProjectCard({
   post,
   linkExternal = false,
 }: {
-  post: any
+  post: CardPost
   linkExternal?: boolean
 }) {
   const hasGradient = !!post.metadata.gradientColors
@@ -112,7 +135,7 @@ function ProjectCard({
           </h3>
           {post.metadata.date ? (
             <span className="text-sm text-neutral-500 dark:text-neutral-400 shrink-0">
-              {post.metadata.date}
+              {new Date(post.metadata.date).getFullYear()}
             </span>
           ) : null}
         </div>
@@ -128,7 +151,7 @@ function CardGrid({
   posts,
   linkExternal = false,
 }: {
-  posts: any[]
+  posts: CardPost[]
   linkExternal?: boolean
 }) {
   return (

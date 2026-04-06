@@ -3,7 +3,6 @@ import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getWorkPosts } from 'app/portfolio/utils'
 import { baseUrl } from 'app/sitemap'
 import ArrowIcon from 'app/components/arrow'
-import Image from 'next/image'
 
 export async function generateStaticParams() {
   let posts = getWorkPosts()
@@ -24,15 +23,8 @@ export async function generateMetadata({ params }) {
     return
   }
 
-  let {
-    title,
-
-    summary: description,
-    image,
-  } = post.metadata
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+  let { title, summary: description } = post.metadata
+  let ogImage = `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
   return {
     title,
@@ -92,13 +84,7 @@ export default async function Blog({ params }) {
           </a>
         ) : null}
       </div>
-      {post.metadata.image ? (
-        <Image
-          className="mt-20 max-w-64 md:col-span-2"
-          src={require(`app/portfolio/images/${post.metadata.image}`).default}
-          alt={post.metadata.title}
-        />
-      ) : null}
+
       <div className="mb-8 mt-2 flex items-center justify-between text-sm"></div>
       <article className="prose">
         <CustomMDX source={post.content} />

@@ -1,30 +1,37 @@
 import fs from 'fs'
 import path from 'path'
 
-type Metadata = {
+type BaseMetadata = {
   title: string
-  order: number
   summary: string
-  image?: string
-  color?: string
+  color: string
   link?: string
-  heroImage?: string
-  previewImage?: string
-  date?: string
   hidden?: string
   gradientColors?: string
-  role?: string
-  years?: string
-  logo?: string
 }
 
-function parseFrontmatter(fileContent: string) {
+export type WorkMetadata = BaseMetadata & {
+  order: number
+  role: string
+  years: string
+  logo: string
+}
+
+export type ProjectMetadata = BaseMetadata & {
+  date: string
+  link: string
+  heroImage?: string
+  previewImage?: string
+  heroBackground?: string
+}
+
+function parseFrontmatter<T>(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/
   let match = frontmatterRegex.exec(fileContent)
   let frontMatterBlock = match![1]
   let content = fileContent.replace(frontmatterRegex, '').trim()
   let frontMatterLines = frontMatterBlock.trim().split('\n')
-  let metadata: Partial<Metadata> = {}
+  let metadata: Record<string, string> = {}
 
   frontMatterLines.forEach((line) => {
     let [key, ...valueArr] = line.split(': ')
@@ -33,22 +40,22 @@ function parseFrontmatter(fileContent: string) {
     metadata[key.trim()] = value
   })
 
-  return { metadata: metadata as Metadata, content }
+  return { metadata: metadata as T, content }
 }
 
 function getMDXFiles(dir) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx')
 }
 
-function readMDXFile(filePath) {
+function readMDXFile<T>(filePath: string) {
   let rawContent = fs.readFileSync(filePath, 'utf-8')
-  return parseFrontmatter(rawContent)
+  return parseFrontmatter<T>(rawContent)
 }
 
-function getMDXData(dir) {
+function getMDXData<T>(dir: string) {
   let mdxFiles = getMDXFiles(dir)
   return mdxFiles.map((file) => {
-    let { metadata, content } = readMDXFile(path.join(dir, file))
+    let { metadata, content } = readMDXFile<T>(path.join(dir, file))
     let slug = path.basename(file, path.extname(file))
 
     return {
@@ -60,11 +67,15 @@ function getMDXData(dir) {
 }
 
 export function getWorkPosts() {
-  return getMDXData(path.join(process.cwd(), 'app', 'portfolio', 'work'))
+  return getMDXData<WorkMetadata>(
+    path.join(process.cwd(), 'app', 'portfolio', 'work'),
+  )
 }
 
 export function getProjectPosts() {
-  return getMDXData(path.join(process.cwd(), 'app', 'portfolio', 'projects'))
+  return getMDXData<ProjectMetadata>(
+    path.join(process.cwd(), 'app', 'portfolio', 'projects'),
+  )
 }
 
 export function formatDate(date: string, includeRelative = false) {

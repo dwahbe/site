@@ -22,7 +22,12 @@ Portfolio content is split into two MDX directories:
 - `app/portfolio/work/` — detailed case studies with individual pages (linked internally)
 - `app/portfolio/projects/` — shorter entries that link externally
 
-Each MDX file has YAML frontmatter with fields: `title`, `order`, `summary`, `image`, `color`, `link`, `heroImage`, `previewImage`, `date`, `hidden`, `gradientColors`, `role`, `years`, `logo`. Parsing lives in `app/portfolio/utils.ts` (`getWorkPosts()` and `getProjectPosts()`), which reads files from disk at build time. MDX is rendered with `next-mdx-remote`.
+Work and project MDX files have distinct frontmatter types defined in `app/portfolio/utils.ts`:
+
+- **Work** (`WorkMetadata`): `title`, `summary`, `color`, `order`, `role`, `years`, `logo`, `link?`, `hidden?`, `gradientColors?`
+- **Projects** (`ProjectMetadata`): `title`, `summary`, `color`, `date`, `link`, `heroImage?`, `previewImage?`, `heroBackground?`, `hidden?`, `gradientColors?`
+
+Parsing lives in `app/portfolio/utils.ts` (`getWorkPosts()` and `getProjectPosts()`), which reads files from disk at build time. Project dates use `YYYY-MM-DD` format internally but only the year is displayed. MDX is rendered with `next-mdx-remote`.
 
 Only work posts get individual pages, statically generated via `generateStaticParams` in `app/portfolio/[slug]/page.tsx`.
 
