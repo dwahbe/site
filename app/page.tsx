@@ -82,13 +82,13 @@ export default function Page() {
             billion endowment from the fossil fuel industry.
           </p>
           <p>
-            After graduating, I joined Hack&nbsp;Club's fiscal sponsorship
-            program, HCB, where I worked as a product manager and account
+            After graduating, I joined The Hack&nbsp;Foundation's fiscal
+            sponsorship program, where I worked as a product manager and account
             manager, helping young organizers and founders launch nonprofits. I
-            left Hack Club in May 2025 to move to Mexico City, where I enrolled
-            in a program at Universidad Nacional Autónoma de México (UNAM) for
-            the latter half of 2025. In early 2026, I moved to London. I
-            currently work at{' '}
+            left The Hack&nbsp;Foundation in May 2025 to move to Mexico City,
+            where I enrolled in a program at Universidad Nacional Autónoma de
+            México (UNAM) for the latter half of 2025. In early 2026, I moved to
+            London. I currently work at{' '}
             <a
               href="https://campusclimatenetwork.org"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
