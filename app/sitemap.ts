@@ -8,10 +8,10 @@ export default async function sitemap() {
     lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  let routes = ['', '/portfolio'].map((route) => ({
-    url: `${baseUrl}${route}`,
+  let home = {
+    url: baseUrl,
     lastModified: new Date().toISOString().split('T')[0],
-  }))
+  }
 
-  return [...routes, ...work]
+  return [home, ...work]
 }

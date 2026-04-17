@@ -107,11 +107,6 @@ function RichLink({
       rel="noopener noreferrer"
       className="rich-link-content !no-underline !text-inherit flex flex-col overflow-hidden rounded-xl bg-neutral-100 transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:bg-neutral-800"
     >
-      {/* <Image
-            src={require(`app/${image}`).default}
-            alt={title}
-            className="rich-link-image"
-          /> */}
       <img
         src={image}
         alt={imageAlt ?? title}

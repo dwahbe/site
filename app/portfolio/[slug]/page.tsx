@@ -12,10 +12,6 @@ export async function generateStaticParams() {
   }))
 }
 
-// export const ImageComponent = (props) => {
-//   return <Image {...props} />
-// }
-
 export async function generateMetadata({ params }) {
   const { slug } = await params
   let post = getWorkPosts().find((post) => post.slug === slug)
