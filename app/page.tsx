@@ -18,26 +18,24 @@ export default function Page() {
         <div className="md:col-span-3">
           <h1 className="mb-2 text-6xl md:text-6xl">Dylan&nbsp;Wahbe</h1>
           <Badge />
-          <p className="font-medium mt-2 mb-4">
-            Product manager and climate organizer.
-          </p>
-          <p className="font-medium mb-4">
-            Working at {''}
+          <p className="font-medium mt-2 mb-4 text-pretty">
+            My work sits at the intersection of climate, technology, and
+            partnerships. I currently work at{' '}
             <a
               href="https://www.campusclimatenetwork.org/"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
             >
               Campus&nbsp;Climate&nbsp;Network
             </a>
-            , <br />
-            building{' '}
+            . I'm also building{' '}
             <a
               href="https://www.climateriver.org"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
             >
               Climate&nbsp;River
             </a>
-            .
+            , a climate news aggregator. I love writing and building tools that
+            make progress on climate justice.
           </p>
           <p className="font-medium mb-6">Based in London, UK.</p>
         </div>
