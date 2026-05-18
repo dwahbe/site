@@ -40,12 +40,14 @@ export default function Page() {
           <p className="font-medium mb-6">Based in London, UK.</p>
         </div>
         {
-          <Image
-            className="max-w-56 md:max-w-56 rounded-2xl md:col-span-2 md:justify-self-end"
-            src={Portrait}
-            alt="Portrait of Dylan Wahbe"
-            placeholder="blur"
-          />
+          <div className="max-w-56 md:max-w-56 overflow-hidden rounded-2xl md:col-span-2 md:justify-self-end">
+            <Image
+              className="scale-[1.4]"
+              src={Portrait}
+              alt="Portrait of Dylan Wahbe"
+              placeholder="blur"
+            />
+          </div>
         }
       </header>
       <details className="group mt-8 mb-8 rounded-xl p-2 border border-[#3E9B91]/30 dark:border-[#3E9B91] border-spacing-1 open:bg-[#3E9B91]/40 dark:open:bg-[#3E9B91]/30 transition-colors grid">
