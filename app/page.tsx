@@ -1,7 +1,7 @@
 import { getWorkPosts, getProjectPosts } from 'app/portfolio/utils'
 import { PortfolioPosts } from 'app/components/posts'
 import Image from 'next/image'
-import Portrait from './profilephoto.jpg'
+import Portrait from './dylan.jpeg'
 import Link from 'next/link'
 import Badge from './components/badge'
 import type { CSSProperties } from 'react'
