@@ -44,6 +44,10 @@ Only work posts get individual pages, statically generated via `generateStaticPa
 
 Tailwind CSS with dark mode via `selector` strategy. Custom fonts configured in `tailwind.config.js`. Global prose and code-block styles in `app/global.css`.
 
+### Asset Scripts
+
+`scripts/` holds one-off generators for static assets (e.g. `make-serial-notes-hero.mjs`, which renders a card hero image with sharp). When regenerating an image that already shipped, write it to a **new filename** and update the MDX reference — the Next.js image optimizer, Vercel's CDN, and browsers all cache by URL, so replacing a file in `public/` under the same name serves stale content.
+
 ### Formatting
 
 Prettier with: `semi: false`, `singleQuote: true`.
