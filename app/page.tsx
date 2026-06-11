@@ -19,23 +19,15 @@ export default function Page() {
           <h1 className="mb-2 text-6xl md:text-6xl">Dylan&nbsp;Wahbe</h1>
           <Badge />
           <p className="font-medium mt-2 mb-4 text-pretty">
-            My work sits at the intersection of climate, technology, and
-            partnerships. I currently work at{' '}
+            My work sits at the intersection of design, communications, and
+            climate. I lead communications at{' '}
             <a
               href="https://www.campusclimatenetwork.org/"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
             >
               Campus&nbsp;Climate&nbsp;Network
             </a>
-            . I'm also building{' '}
-            <a
-              href="https://www.climateriver.org"
-              className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
-            >
-              Climate&nbsp;River
-            </a>
-            , a climate news aggregator. I love writing and building tools that
-            make progress on climate justice.
+            .
           </p>
           <p className="font-medium mb-6">Based in London, UK.</p>
         </div>
@@ -72,38 +64,56 @@ export default function Page() {
         </summary>
         <div className="grid gap-6 md:gap-6 p-2 text-dark text-pretty font-mono-slabs weight-book">
           <p>
-            I'm Dylan Wahbe (he/him), a product manager and climate organizer
-            from Seattle. I got into politics in high school—joining protests,
-            volunteering on congressional campaigns, and reading lots of
-            political texts. At NYU, I studied Media, Culture, and
-            Communications with a focus on political messaging, and co-founded
-            the university's Sunrise Movement chapter. With my fellow
-            organizers, we successfully campaigned for NYU to divest its $5+
-            billion endowment from the fossil fuel industry.
-          </p>
-          <p>
-            After graduating, I joined The Hack&nbsp;Foundation's fiscal
-            sponsorship program, where I worked as a product manager and account
-            manager, helping young organizers and founders launch nonprofits. I
-            left The Hack&nbsp;Foundation in May 2025 to move to Mexico City,
-            where I enrolled in a program at Universidad Nacional Autónoma de
-            México (UNAM) for the latter half of 2025. In early 2026, I moved to
-            London. I currently work at{' '}
+            I'm Dylan (he/him), a product designer and communicator from
+            Seattle. Today, I live in London and work as Communications Lead at{' '}
             <a
               href="https://campusclimatenetwork.org"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
             >
               Campus Climate Network
-            </a>{' '}
-            and am building{' '}
+            </a>
+            , where we train and organize the next generation of climate
+            leaders. As an independent designer & developer, I build the
+            educational tools I want to see in the world: from a{' '}
             <a
               href="https://climateriver.org"
               className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
             >
-              Climate River
-            </a>
-            , a climate news aggregator. I care about creating tools that
-            support movements and communities working toward justice.
+              climate news aggregator
+            </a>{' '}
+            inspired by Techmeme, a{' '}
+            <a
+              href="https://seattleatlas.org/map"
+              className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
+            >
+              map of Seattle
+            </a>{' '}
+            that demystifies zoning and transit policy, and a{' '}
+            <a
+              href="https://serialnotes.app"
+              className="underline underline-offset-2 hover:text-[#1e4d18]/80 dark:hover:text-[#3E9B91]"
+            >
+              meeting transcription app
+            </a>{' '}
+            that is private and runs on device.
+          </p>
+          <p>
+            Before London, I worked at The Hack&nbsp;Foundation's fiscal
+            sponsorship program as a product manager and account manager,
+            helping young organizers and founders launch nonprofits, then spent
+            the latter half of 2025 in Mexico City studying at Universidad
+            Nacional Autónoma de México (UNAM). I care about creating tools
+            that enrich people's lives and support communities working toward
+            justice.
+          </p>
+          <p>
+            I got into politics in high school—joining protests, volunteering on
+            congressional campaigns, and reading lots of political texts. At
+            NYU, I studied Media, Culture, and Communications with a focus on
+            political messaging, and co-founded the university's Sunrise
+            Movement chapter. With my fellow organizers, we successfully
+            campaigned for NYU to divest its $5+ billion endowment from the
+            fossil fuel industry.
           </p>
         </div>
       </details>
