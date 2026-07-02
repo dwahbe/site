@@ -102,8 +102,8 @@ export default function Page() {
             sponsorship program as a product manager and account manager,
             helping young organizers and founders launch nonprofits, then spent
             the latter half of 2025 in Mexico City studying at Universidad
-            Nacional Autónoma de México (UNAM). I care about creating tools
-            that enrich people's lives and support communities working toward
+            Nacional Autónoma de México (UNAM). I care about creating tools that
+            enrich people's lives and support communities working toward
             justice.
           </p>
           <p>
