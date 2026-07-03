@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -7,12 +10,20 @@ type CardMetadata = {
   color: string
   link?: string
   date?: string
+  category?: string
   heroImage?: string
   previewImage?: string
   heroBackground?: string
   gradientColors?: string
   hidden?: string
 }
+
+const FILTERS = [
+  { key: 'all', label: 'All' },
+  { key: 'portfolio', label: 'Portfolio' },
+  { key: 'projects', label: 'Personal projects' },
+  { key: 'writing', label: 'Writing' },
+]
 
 type CardPost = {
   metadata: CardMetadata
@@ -35,23 +46,43 @@ export function PortfolioPosts({
   heading?: string
   linkExternal?: boolean
 }) {
+  const [filter, setFilter] = useState('all')
+  const hasCategories = posts.some((post) => post.metadata.category)
+
+  const visiblePosts = [...posts]
+    .sort((a, b) => {
+      const dateA = a.metadata.date ? new Date(a.metadata.date).getTime() : 0
+      const dateB = b.metadata.date ? new Date(b.metadata.date).getTime() : 0
+      return dateB - dateA
+    })
+    .filter((post) => post.metadata.hidden !== 'true')
+    .filter((post) => filter === 'all' || post.metadata.category === filter)
+
   return (
     <div>
-      <h2 className="mb-4">{heading}</h2>
-      <CardGrid
-        linkExternal={linkExternal}
-        posts={[...posts]
-          .sort((a, b) => {
-            const dateA = a.metadata.date
-              ? new Date(a.metadata.date).getTime()
-              : 0
-            const dateB = b.metadata.date
-              ? new Date(b.metadata.date).getTime()
-              : 0
-            return dateB - dateA
-          })
-          .filter((post) => post.metadata.hidden !== 'true')}
-      />
+      <div className="mb-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <h2 className="my-0">{heading}</h2>
+        {hasCategories ? (
+          <div className="flex flex-wrap gap-2">
+            {FILTERS.map(({ key, label }) => (
+              <button
+                key={key}
+                type="button"
+                aria-pressed={filter === key}
+                onClick={() => setFilter(key)}
+                className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
+                  filter === key
+                    ? 'bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900'
+                    : 'bg-white/40 text-neutral-600 hover:text-neutral-900 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-100'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        ) : null}
+      </div>
+      <CardGrid linkExternal={linkExternal} posts={visiblePosts} />
     </div>
   )
 }

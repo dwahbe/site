@@ -17,9 +17,12 @@ export type WorkMetadata = BaseMetadata & {
   logo: string
 }
 
+export type ProjectCategory = 'projects' | 'portfolio' | 'writing'
+
 export type ProjectMetadata = BaseMetadata & {
   date: string
   link: string
+  category: ProjectCategory
   heroImage?: string
   previewImage?: string
   heroBackground?: string
