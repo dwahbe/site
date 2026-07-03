@@ -5,10 +5,11 @@ import { useState, useEffect } from 'react'
 const facts = [
   'Proudly from Seattle',
   'Loves Brooklyn Heights',
-  'Once a barista, always a barista',
+  'Once a barista',
   'Learning Spanish',
   'Watching Succession',
   'Proud UNAM Alum',
+  'Salsa dancing',
 ]
 
 export default function FactBadge() {
