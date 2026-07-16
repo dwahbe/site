@@ -7,7 +7,7 @@ export default function Footer() {
         <ThemeSwitcher />
         <div className="flex items-center gap-1">
           <p className="text-sm text-neutral-600 dark:text-neutral-300">
-            Last updated April 2026
+            Last updated July 2026
           </p>
           <a
             href="https://github.com/dwahbe/site"
